@@ -1,34 +1,46 @@
-### **LYNX**
-**M:** 14" | **T:** 9 | **SV:** 3+ | **W:** 16 | **LD:** 6+ | **OC:** 4
-**Invulnerable Save:** 5+
+# Datasheet: Lynx
 
-| Ranged Weapons | Range | A | BS | S | AP | D | Keywords |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Aeldari missile launcher – starshot | 48" | 1 | 3+ | 10 | -2 | D6 | - |
-| Aeldari missile launcher – sunburst blast | 48" | D6 | 3+ | 4 | -1 | 1 | Blast |
-| Bright lance | 36" | 1 | 3+ | 12 | -3 | D6+2 | - |
-| **Lynx pulsar** | 48" | 4 | 3+ | 16 | -3 | D6 | - |
-| Scatter laser | 36" | 6 | 3+ | 5 | 0 | 1 | - |
-| Shuriken cannon | 24" | 3 | 3+ | 6 | -1 | 2 | Sustained Hits 1 |
-| Starcannon | 36" | 2 | 3+ | 8 | -3 | 2 | - |
+The Lynx is a heavy gun platform that bridges the gap between a Falcon and a Super-heavy tank, combining significant durability with devastating firepower. Utilizing its advanced pulsar weaponry, it can engage and destroy the most formidable of enemy targets, while its high speed and maneuverability allow it to redeploy quickly to where its firepower is needed most. Its role is one of heavy fire support, often acting as a lynchpin for Aeldari offensive and defensive lines.
 
-| Melee Weapons | Range | A | WS | S | AP | D | Keywords |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Wraithbone hull | Melee | 3 | 4+ | 6 | 0 | 1 | - |
+## Stats
+| M | T | Sv | W | Ld | OC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 14" | 10 | 3+ | 16 | 6+ | 5 |
 
-**Abilities**
-*   **Core:** Deadly Demise D6
-*   **Faction:** Battle Focus
-*   **Speed of Vaul:** Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 9" to the Move characteristic of this model.
+## Ranged Weapons
+| Weapon | Range | A | BS | S | AP | D | Keywords |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Lynx pulsar | 48" | 4 | 3+ | 16 | -3 | D6 | [ASSAULT] |
+| Shuriken cannon | 24" | 3 | 3+ | 6 | -1 | 2 | [SUSTAINED HITS 1] |
+| Aeldari missile launcher – frag | 48" | D6 | 3+ | 4 | 0 | 1 | [BLAST] |
+| Aeldari missile launcher – krak | 48" | 1 | 3+ | 9 | -2 | D6 | - |
+| Bright lance | 36" | 1 | 3+ | 12 | -3 | D6+1 | - |
+| Scatter laser | 36" | 6 | 3+ | 6 | 0 | 1 | - |
+| Starcannon | 36" | 2 | 3+ | 8 | -2 | 2 | - |
 
-**Damaged: 1-5 Wounds Remaining**
-While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+## Melee Weapon
+| Weapon | Range | A | WS | S | AP | D | Keywords |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Armoured hull | Melee | 3 | 4+ | 8 | 0 | 1 | - |
 
-**Wargear Options**
-*   This model's shuriken cannon can be replaced with one of the following: 1 Aeldari missile launcher, 1 bright lance, 1 scatter laser, or 1 starcannon.
+## Abilities
+### **Core**
+*   **Deadly Demise D6**
 
-**Unit Composition**
-*   1 Lynx (Equipped with: Lynx pulsar, shuriken cannon, wraithbone hull)
+### **Faction**
+*   **Strands of Fate**
 
-**Keywords:** Vehicle, Fly, Aeldari, Lynx
-**Faction Keywords:** Asuryani
+### **Speed of Vaul**
+Each time this model Advances, do not make an Advance roll. Instead, until the end of the phase, add 9" to the Move characteristic of this model.
+
+### **Damaged: 1-5 Wounds Remaining**
+While this model has 1-5 wounds remaining, each time it makes an attack, subtract 1 from the Hit roll.
+
+## Unit Composition
+*   1 Lynx (Equipped with: Lynx pulsar, shuriken cannon, armoured hull)
+
+## Keywords
+**VEHICLE**, **FLY**, **AELDARI**, **LYNX**
+
+## Faction Keywords
+**ASURYANI**

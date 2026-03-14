@@ -1,35 +1,50 @@
-# Warlock Conclave
-**M:** 7" | **T:** 3 | **Sv:** 6+ | **W:** 2 | **Ld:** 6+ | **OC:** 1
-**Invulnerable Save:** 4+
+# Datasheet: Warlock Conclave
 
-### Ranged Weapons
-| Weapon | Range | A | BS | S | AP | D | Abilities |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Destructor | 12" | D6 | N/A | 5 | -1 | 1 | Psychic, Torrent |
-| Shuriken pistol | 12" | 1 | 3+ | 4 | -1 | 1 | Assault, Pistol |
-| Singing spear | 12" | 1 | 3+ | 9 | 0 | 3 | Assault, Psychic |
+A Warlock Conclave consists of several of these warrior-seers, their minds linked in a powerful psychic network that allows them to unleash devastating blasts of energy and shield their allies from harm. They are often found supporting Guardian squads, providing a vital layer of protection and offensive power. Their dual nature as both warriors and psykers makes them exceptionally versatile, able to adapt to any battlefield situation.
 
-### Melee Weapons
-| Weapon | Range | A | WS | S | AP | D | Abilities |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Singing spear | Melee | 2 | 3+ | 3 | 0 | 3 | Psychic |
-| Witchblade | Melee | 2 | 3+ | 3 | 0 | 2 | Anti-Infantry 2+, Psychic |
+## Stats
+| M | T | Sv | W | Ld | OC | Invul |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 7" | 3 | 6+ | 2 | 6+ | 1 | 4++ |
 
-### Abilities
-*   **Core:** Leader
-*   **Faction:** Battle Focus
-*   **Protect (Psychic):** While a **Farseer** model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.
-*   **Psychic Communion (Psychic):** Each time this unit is selected to shoot, for each **Warlock** model in this unit, until the end of the phase, add 1 to the Attacks and Strength characteristics of that model's Destructor weapon for each other friendly **Aeldari Psyker** model within 6" of that model (to a maximum of +2).
+## Ranged Weapons
+| Weapon | Range | A | BS | S | AP | D | Keywords |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Destructor | 12" | D6 | N/A | 4 | -1 | 1 | [PSYCHIC, TORRENT] |
+| Shuriken pistol | 12" | 1 | 3+ | 4 | -1 | 1 | [ASSAULT, PISTOL] |
+| Singing spear | 12" | 1 | 3+ | 9 | 0 | 3 | [ASSAULT, PSYCHIC] |
 
-### Wargear Options
-*   Any number of models can each have their witchblade replaced with 1 singing spear.
+## Melee Weapons
+| Weapon | Range | A | WS | S | AP | D | Keywords |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Witchblade | Melee | 2 | 3+ | 3 | -1 | 2 | [ANTI-INFANTRY 2+, PSYCHIC] |
+| Singing spear | Melee | 2 | 3+ | 3 | 0 | 3 | [ANTI-INFANTRY 2+, PSYCHIC] |
 
-### Unit Composition
-*   **2-4 Warlocks**
-*   Every model is equipped with: Destructor; shuriken pistol; witchblade.
+## Abilities
+### **Core**
+*   **Leader**
 
-### Leader
-At the start of the Declare Battle Formations step, if this unit is not an Attached unit, this unit can join one **Guardian Defenders** or **Storm Guardians** unit from your army (a unit cannot have more than one **Warlock Conclave** unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit.
+### **Faction**
+*   **Strands of Fate**
 
-**Keywords:** Infantry, Aeldari, Psyker, Warlocks, Warlock Conclave
-**Faction Keywords:** Asuryani
+### **Psychic Communion (Psychic)**
+Each time this unit is selected to shoot, for each **WARLOCK** model in the unit, add 1 to the Attacks and Strength of that model's **Destructor** weapon for each other friendly **AELDARI PSYKER** model within 6" (to a maximum of +2).
+
+### **Protect (Psychic)**
+While a **FARSEER** model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.
+
+## Unit Composition
+*   2 or 4 Warlocks
+*   Every model is equipped with: Destructor, shuriken pistol, witchblade.
+
+## Keywords
+**INFANTRY**, **PSYKER**, **AELDARI**, **WARLOCK CONCLAVE**
+
+## Faction Keywords
+**ASURYANI**
+
+## Leader Attachment
+This unit can join one of the following units:
+*   **Guardian Defenders**
+*   **Storm Guardians**
+If a **FARSEER** model joins a unit, it can also join that unit.

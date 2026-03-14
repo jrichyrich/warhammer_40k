@@ -1,0 +1,112 @@
+# Aeldari Datasheets
+
+This index provides links to all unique and common datasheets available to the Aeldari in 10th Edition, including Asuryani, Harlequins, Ynnari, and Corsairs.
+
+## Epic Heroes (Phoenix Lords & Legends)
+*   [Asurmen](asurmen.md)
+*   [Avatar of Khaine](avatar_of_khaine.md)
+*   [Baharroth](baharroth.md)
+*   [Eldrad Ulthran](eldrad_ulthran.md)
+*   [Fuegan](fuegan.md)
+*   [Illic Nightspear](illic_nightspear.md)
+*   [Irillyth](irillyth.md)
+*   [Jain Zar](jain_zar.md)
+*   [Karandras](karandras.md)
+*   [Lhykhis](lhykhis.md)
+*   [Maugan Ra](maugan_ra.md)
+*   [Phoenix](phoenix.md)
+*   [Prince Yriel](prince_yriel.md)
+*   [The Visarch](the_visarch.md)
+*   [The Yncarne](the_yncarne.md)
+*   [Yvraine](yvraine.md)
+
+## Characters
+*   [Amallyn Shadowguide](amallyn_shadowguide.md)
+*   [Autarch](autarch.md)
+*   [Autarch Skyrunner](autarch_skyrunner.md)
+*   [Autarch Wayleaper](autarch_wayleaper.md)
+*   [Bonesinger](bonesinger.md)
+*   [Death Jester](death_jester.md)
+*   [Farseer](farseer.md)
+*   [Farseer Skyrunner](farseer_skyrunner.md)
+*   [Shadowseer](shadowseer.md)
+*   [Solitaire](solitaire.md)
+*   [Spiritseer](spiritseer.md)
+*   [Troupe Master](troupe_master.md)
+*   [Warlock](warlock.md)
+*   [Warlock Skyrunners](warlock_skyrunners.md)
+
+## Battleline
+*   [Guardian Defenders](guardian_defenders.md)
+*   [Storm Guardians](storm_guardians.md)
+*   [Troupe](troupe.md)
+
+## Aspect Warriors
+*   [Dark Reapers](dark_reapers.md)
+*   [Dire Avengers](dire_avengers.md)
+*   [Fire Dragons](fire_dragons.md)
+*   [Howling Banshees](howling_banshees.md)
+*   [Shining Spears](shining_spears.md)
+*   [Striking Scorpions](striking_scorpions.md)
+*   [Swooping Hawks](swooping_hawks.md)
+*   [Warp Spiders](warp_spiders.md)
+
+## Infantry & Wraiths
+*   [Rangers](rangers.md)
+*   [Warlock Conclave](warlock_conclave.md)
+*   [Wraithblades](wraithblades.md)
+*   [Wraithguard](wraithguard.md)
+*   [Wraithlord](wraithlord.md)
+*   [Wraithseer](wraithseer.md)
+
+## Mounted & Beasts
+*   [Shroud Runners](shroud_runners.md)
+*   [Skyweavers](skyweavers.md)
+*   [Windriders](windriders.md)
+
+## Vehicles
+*   [Falcon](falcon.md)
+*   [Fire Prism](fire_prism.md)
+*   [Hornet](hornet.md)
+*   [Night Spinner](night_spinner.md)
+*   [Starweaver](starweaver.md)
+*   [Support Weapons](support_weapons.md)
+*   [Voidweaver](voidweaver.md)
+*   [Vypers](vypers.md)
+*   [War Walkers](war_walkers.md)
+*   [Wave Serpent](wave_serpent.md)
+
+## Super-Heavies & Flyers
+*   [Cobra](cobra.md)
+*   [Crimson Hunter](crimson_hunter.md)
+*   [Hemlock Wraithfighter](hemlock_wraithfighter.md)
+*   [Lynx](lynx.md)
+*   [Nightwing](nightwing.md)
+*   [Phantom Titan](phantom_titan.md)
+*   [Revenant Titan](revenant_titan.md)
+*   [Scorpion](scorpion.md)
+*   [Skathach Wraithknight](skathach_wraithknight.md)
+*   [Vampire Hunter](vampire_hunter.md)
+*   [Vampire Raider](vampire_raider.md)
+*   [Warp Hunter](warp_hunter.md)
+*   [Wraithknight](wraithknight.md)
+
+## Corsairs & Special
+*   [Corsair Cloud Dancer Band](corsair_cloud_dancer_band.md)
+*   [Corsair Reaver Band](corsair_reaver_band.md)
+*   [Corsair Skyreaver Band](corsair_skyreaver_band.md)
+*   [Corsair Skyreavers](corsair_skyreavers.md)
+*   [Corsair Voidreavers](corsair_voidreavers.md)
+*   [Corsair Voidscarred](corsair_voidscarred.md)
+*   [Webway Gate](webway_gate.md)
+
+## Ynnari (Drukhari Allies)
+*   [Hellions](hellions.md)
+*   [Ynnari Archon](ynnari_archon.md)
+*   [Ynnari Incubi](ynnari_incubi.md)
+*   [Ynnari Kabalite Warriors](ynnari_kabalite_warriors.md)
+*   [Ynnari Raider](ynnari_raider.md)
+*   [Ynnari Reavers](ynnari_reavers.md)
+*   [Ynnari Succubus](ynnari_succubus.md)
+*   [Ynnari Venom](ynnari_venom.md)
+*   [Ynnari Wyches](ynnari_wyches.md)
