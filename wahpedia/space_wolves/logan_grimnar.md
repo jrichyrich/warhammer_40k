@@ -1,6 +1,6 @@
 # Datasheet: Logan Grimnar
 
-Logan Grimnar, the Great Wolf and High King of Fenris, has led the Space Wolves for over five hundred years. He is a hero of legendary stature, a warrior whose strength and wisdom are matched only by his fierce devotion to his Chapter and the Imperium.
+Logan Grimnar, the Great Wolf and High King of Fenris, has led the Space Wolves for over five hundred years. He is a hero of legendary stature, a warrior whose strength and wisdom are matched only by his fierce devotion to his Chapter and the Imperium. In his latest incarnation, he is often accompanied by his faithful wolves, Tyrnak and Fenrir, who fight alongside him as he leads his brothers from the front.
 
 ## Stats
 | M | T | Sv | W | Ld | OC | Invul |
