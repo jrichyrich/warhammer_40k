@@ -60,3 +60,8 @@ You can use Fate dice for any of the following types of dice roll:
 *   Hit roll
 *   Saving throw
 *   Wound roll
+
+---
+
+## Disparate Paths
+When mustering your army, you can include **HARLEQUINS** units in your army, even though they do not have the **ASURYANI** Faction keyword. Unless otherwise stated, you cannot select **HARLEQUINS** or **YNNARI** as your Army Faction.

@@ -1,33 +1,46 @@
-### **Wraithknight**
-**Keywords:** Monster, Titanic, Towering, Aeldari, Walker, Wraith Construct, Wraithknight
-**Faction Keywords:** Asuryani
+# Wraithknight
 
 | M | T | Sv | W | Ld | OC |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 12" | 12 | 2+ | 18 | 6+ | 10 |
+| 10" | 12 | 2+ | 22 | 6+ | 10 |
 
-#### **Ranged Weapons**
+**Invulnerable Save:** 5+ (or 4+ with Scattershield)
+
+---
+
+### Ranged Weapons
 | Weapon | Range | A | BS | S | AP | D | Keywords |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Heavy wraithcannon | 36" | D3 | 3+ | 20 | -4 | 2D6 | Devastating Wounds |
-| Scatter laser | 36" | 6 | 3+ | 5 | 0 | 1 | Sustained Hits 1 |
-| Shuriken cannon | 24" | 3 | 3+ | 6 | -1 | 2 | Lethal Hits |
-| Starcannon | 36" | 2 | 3+ | 8 | -3 | 2 | - |
-| Suncannon | 48" | D6+4 | 3+ | 10 | -3 | 3 | Blast |
+| **Heavy Wraithcannon** | 36" | 2 | 3+ | 18 | -4 | D6+1 | [BLAST], [DEVASTATING WOUNDS] |
+| **Starcannon** | 36" | 2 | 3+ | 8 | -3 | 2 | - |
+| **Suncannon** | 36" | 2D6 | 3+ | 8 | -2 | 2 | [BLAST] |
 
-#### **Melee Weapons**
+---
+
+### Melee Weapons
 | Weapon | Range | A | WS | S | AP | D | Keywords |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Titanic feet | Melee | 5 | 3+ | 8 | -1 | 2 | - |
+| **Ghostglaive (Strike)** | Melee | 5 | 3+ | 16 | -4 | 6 | - |
+| **Ghostglaive (Sweep)** | Melee | 10 | 3+ | 8 | -2 | 2 | - |
+| **Titanic Feet** | Melee | 6 | 4+ | 8 | -1 | 2 | - |
 
-#### **Abilities**
-*   **Core:** Deadly Demise D6
-*   **Faction:** Battle Focus
-*   **Titanic Strides:** This model can move through models (excluding **TITANIC**) and terrain 4" or less in height. It can move through taller terrain, but must roll a D6: on a 1, it is Battle-shocked.
-*   **Point-blank Devastation:** Each time this model’s heavy wraithcannon or suncannon targets a unit within half range, you can re-roll the dice to determine the number of attacks.
-*   **Damaged (1-6 Wounds Remaining):** Subtract 5 from OC and -1 to Hit rolls.
+---
 
-#### **Wargear Abilities**
-*   **Scattershield:** The bearer has a 4+ invulnerable save and subtracts 1 from the Damage characteristic of allocated attacks.
+### Abilities
+**Core:** Deadly Demise D6
+**Faction:** Strands of Fate
 
-**Points:** 510 pts
+**Wraithbone Form**
+Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
+
+---
+
+### Wargear Options
+*   **Scattershield:** Grants the bearer a 4+ invulnerable save.
+*   **Ghostglaive:** Enables the Strike and Sweep melee profiles.
+
+---
+
+### Keywords
+**Keywords:** Monster, Titanic, Towering, Walker, Wraith Construct, Wraithknight
+**Faction Keywords:** Aeldari, Asuryani

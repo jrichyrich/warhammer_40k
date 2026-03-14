@@ -2,61 +2,48 @@
 
 | M | T | Sv | W | Ld | OC |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 5" | 6 | 3+ | 5 | 7+ | 1 |
+| 5" | 6 | 3+ | 5 | 6+ | 1 |
 
 ---
 
-### Ranged Weapons (Choose one for the platform)
+### Ranged Weapons
 | Weapon | Range | A | BS | S | AP | D | Keywords |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **D-cannon** | 24" | D3 | 4+ | 12 | -4 | D6+2 | Blast, Heavy, Indirect Fire, Devastating Wounds |
-| **Shadow Weaver** | 48" | 2D6 | 4+ | 6 | 0 | 1 | Blast, Heavy, Indirect Fire, Sustained Hits 1 |
-| **Vibro Cannon** | 36" | 1 | 4+ | 8 | -1 | 2 | Heavy, Sustained Hits 1, Twin-linked |
+| **D-cannon** | 24" | D3 | 3+ | 12 | -4 | D6+2 | [BLAST], [INDIRECT FIRE], [DEVASTATING WOUNDS] |
+| **Shadow Weaver** | 48" | 2D6 | 3+ | 6 | 0 | 1 | [BLAST], [INDIRECT FIRE], [SUSTAINED HITS 1] |
+| **Vibro Cannon** | 36" | 1 | 3+ | 8 | -2 | 2 | [SUSTAINED HITS 1] |
 
 ---
 
 ### Melee Weapons
 | Weapon | Range | A | WS | S | AP | D | Keywords |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Close combat weapon** | Melee | 1 | 5+ | 3 | 0 | 1 | - |
+| **Close Combat Weapon** | Melee | 2 | 4+ | 3 | 0 | 1 | - |
 
 ---
 
 ### Abilities
+**Core:** Deadly Demise 1
 **Faction:** Strands of Fate
 
-**Guardian Crew**
-While this unit contains one or more Guardian Crew models, it has the **Infantry** keyword.
+**Destined of Asuryan**
+Once per battle, in your Shooting phase, after this unit has shot, it can make a Normal move of up to 6".
 
-**Support Platform**
-Each time an attack is allocated to a Guardian Crew model in this unit, that attack has a Damage characteristic of 1.
-
-**Vibro-blast (Vibro Cannon only)**
-Each time an attack is made with a Vibro Cannon, if a hit is scored, until the end of the phase, each time a friendly AELDARI model makes an attack with a Vibro Cannon against that same enemy unit, add 1 to the Wound roll.
-
-**Monofilament Web (Shadow Weaver only)**
-In your Shooting phase, after this unit has shot, if one or more hits were scored against an enemy INFANTRY unit, until the start of your next Shooting phase, subtract 2" from the Move characteristic of models in that unit and subtract 2 from Advance and Charge rolls made for that unit.
+**Vibratory Resonance (Vibro Cannon only)**
+Each time an attack is made with this weapon, if the target has already been hit by one or more vibro cannons this phase, add 1 to the Wound roll.
 
 ---
 
 ### Unit Composition
 *   **1 Support Weapon**
-*   **2 Guardian Crew**
 
 **Equipped with:**
-*   **Support Weapon:** Close combat weapon; Shuriken cannon (Note: The platform replaces its Shuriken cannon with one of the heavy weapons above).
-*   **Guardian Crew:** Close combat weapon.
-
-**Wargear Options:**
-The model's Shuriken cannon must be replaced with one of the following: 
-* 1 D-cannon
-* 1 Shadow Weaver
-* 1 Vibro Cannon.
+*   Close Combat Weapon
+*   D-cannon*
+*(The D-cannon can be replaced with 1 Shadow Weaver or 1 Vibro Cannon)*
 
 ---
 
 ### Keywords
 **Keywords:** Vehicle, Artillery, Support Weapons
-**Faction Keywords:** Asuryani
-
-**Points:** 135 pts (D-cannon) / 105 pts (Shadow Weaver/Vibro Cannon)
+**Faction Keywords:** Aeldari, Asuryani
