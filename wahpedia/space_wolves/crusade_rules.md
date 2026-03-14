@@ -6,37 +6,66 @@ Space Wolves Crusade rules focus on the "Forging of Legends" and the "Sagas of t
 This is the primary Crusade system for all Space Marines, which Space Wolves utilize as their base. It focuses on the **Chapter Command** structure and the **Assignment and Promotion** of heroes.
 
 *   **Chapter Command:** Allows you to assign characters to specific roles (e.g., Wolf Lord, Wolf Guard Battle Leader). As they gain experience, they can be promoted to higher ranks: **Blooded**, **Battle-hardened**, **Heroic**, and **Legendary**.
-*   **Deeds of Making:** A unique Space Wolves addition to this system. It allows characters to earn permanent "titles" or "suffixes" to their names based on their battlefield performance, granting unique buffs. For example, the title "Beastslayer" might grant re-rolls for Wound rolls against **MONSTERS** or **VEHICLES**.
+*   **Deeds of Making:** A unique Space Wolves addition to this system. It allows characters to earn permanent "titles" or "suffixes" to their names based on their battlefield performance, granting unique buffs.
+
+### Deeds of Making (Honorifics)
+At the end of an Oathsworn Campaign, you can spend accumulated **Honour Points (HP)** on unique titles for your Characters:
+*   **Beast Slayer (15 HP):** The model can re-roll Wound rolls against **MONSTERS** and **VEHICLES**.
+*   **Death Cheat (20 HP):** While this model is on the battlefield, you can re-roll up to two failed Out of Action tests for friendly **INFANTRY** or **MOUNTED** units after the battle.
+*   **Murkstalker (15 HP):** The model gains the **[INFILTRATORS]** and **[SCOUTS 6"]** abilities.
+*   **Stormstride (15 HP):** The model gains the **[DEEP STRIKE]** ability (or adds 2" to its Move characteristic if it already has it).
+*   **Savage Orator (10 HP):** The model gains a 6" Aura that allows friendly units to re-roll **Battle-shock** tests.
+
+---
 
 ## Oathsworn Campaigns
-Space Wolves have access to bespoke narrative campaigns that typically last 3–4 battles. Completing these earns **Honour Points**, which are spent on unique Requisitions and promotions.
-*   **Worthy of a Saga:** Focuses on individual characters performing heroic feats to earn renown.
-*   **Glory Seekers:** Centered on the Great Companies competing for the most prestigious kills.
-*   **Hunters Unleashed:** A campaign focused on tracking and eliminating specific high-value enemy targets.
-*   **Deeds of Making:** A campaign path specifically for ascending characters into the "Warriors of Legend" status.
+Space Wolves Crusade forces embark on narrative paths called Oathsworn Campaigns. Each campaign typically lasts 3 battles.
+
+### **1. Worthy of a Saga**
+*Focuses on the tactical acumen of your leaders and their ability to inspire the pack through legendary deeds.*
+*   **Unique Requisition - Prospective Wolf Guard (1RP):** Select one **SPACE WOLVES** unit; it is **Marked for Greatness** in addition to any other units.
+*   **Campaign Agenda - Heroic Challenge:** Gain 1 HP each time an enemy **CHARACTER** is destroyed by a melee attack (max 3 HP).
+*   **Campaign Agenda - Mighty Trophies:** Opponent selects 5 units; gain 3 HP if you destroy 3+ of them.
+
+### **2. Glory Seekers**
+*For warriors who seek to forge an epic legend through reckless bravery and public boasts.*
+*   **Unique Requisition - Deeds Beyond Counting (1RP):** Your **WARLORD** selects an additional **Audacious Boast** Agenda. Gain 3 HP if achieved; lose D3 HP if failed.
+*   **Audacious Boasts:**
+    *   **Go for the Throat:** Warlord must charge first in every eligible phase.
+    *   **Never Back Down:** Warlord cannot Fall Back.
+    *   **Slay the Beast:** Warlord must destroy 1+ **MONSTER** units.
+    *   **Cut Down the Tyrant:** Warlord must destroy the enemy **WARLORD**.
+
+### **3. Hunters Unleashed**
+*Emphasizes the "wolf pack" mentality, rewarding units that coordinate their strikes.*
+*   **Unique Requisition - Pack Rivalry (1RP):** Select two units; if both gain 3+ XP in a battle, gain 3 HP.
+*   **Campaign Agenda - The Great Hunt:** Gain 1 HP if you destroy an enemy unit that was in Engagement Range of 2+ of your units.
+*   **Campaign Agenda - Alpha Strike:** Gain 2 HP if you destroy an enemy unit in the first battle round.
+
+### **4. Unflinching Bulwark**
+*A defensive campaign focused on holding ground.*
+*   **Benefit:** You are always the **Defender** in missions with such roles.
+*   **Agendas:** **Secure the Perimeter**, **Hold the Center**.
+
+### **5. Precision Strike**
+*An offensive campaign focused on surgical strikes.*
+*   **Benefit:** You are always the **Attacker** in missions with such roles.
+*   **Agendas:** **Surgical Strike**, **Behind Enemy Lines**.
+
+---
 
 ## Lone Wolves
-This is the most iconic Space Wolves Crusade mechanic, representing a warrior who has lost their entire pack and seeks a glorious death to restore their honor.
+If a Space Wolves **INFANTRY** or **MOUNTED** unit (of at least **Blooded** rank) is destroyed, you can replace it with a **Lone Wolf**.
+*   **The Model:** Replaced by a single **Wolf Guard Battle Leader** model.
+*   **Abilities:** Gains **[LONE OPERATIVE]** and **Oath of Vengeance** (re-roll Hits; re-roll Wounds vs Monsters/Vehicles).
+*   **Lone Wolf Battle Scars:** Unique scars like **Pack of One** ([INFILTRATORS], [SCOUTS 6"], OC 0).
 
-### **The Lone Wolf’s Vow**
-If a Space Wolves **INFANTRY** or **MOUNTED** unit (of at least **Blooded** rank) is destroyed, you can choose to replace that unit on your Order of Battle with a **Lone Wolf**.
-*   **The Model:** The unit is replaced by a single **Wolf Guard Battle Leader** model.
-*   **Abilities:** He gains the **[LONE OPERATIVE]** keyword and the **Oath of Vengeance** ability.
-*   **Oath of Vengeance:** Each time this model makes a melee attack, you can re-roll the Hit roll. If the target is a **MONSTER** or **VEHICLE**, you can also re-roll the Wound roll.
-
-### **Lone Wolf Battle Scars**
-As the Lone Wolf continues to fight and suffer damage, they gain unique scars instead of standard ones:
-*   **Pack of One:** Gains **[INFILTRATORS]** and **[SCOUTS 6"]**, but his **Objective Control (OC)** characteristic becomes **0**.
-*   **An Honourable End:** He can **shoot and charge** in a turn in which he **Advanced**, but subtracts 1 from all **Out of Action** tests.
-*   **Vengeance Before Death:** Gains a **5+ Feel No Pain** ability but can **never Fall Back**.
-
-### **A Glorious Death (Requisition)**
-When a Lone Wolf with at least 2 Battle Honours and 3 Lone Wolf Battle Scars is finally removed from your Order of Battle (dies permanently), his saga is sung. Every Space Wolves unit in your force gains **2 XP**, and you receive **5 Honour Points**.
+---
 
 ## Crusade Content
 *   **Agendas:** Specific battlefield goals (e.g., "Slay the Beast").
 *   **Requisitions:** Unique resources for a Space Wolves force.
 *   **Battle Traits:** Chapter-specific upgrades for surviving units.
 *   **Crusade Relics:** Powerful artifacts earned through deeds.
-*   **Crusade Badges:** Mark significant milestones in a unit's history.
-*   **Oathsworn Campaign Tracker:** Used to monitor progress through Oathsworn Campaigns.
+*   **Crusade Badges:** Mark significant milestones.
+*   **Oathsworn Campaign Tracker:** Used to monitor progress and accumulated Honour Points.
