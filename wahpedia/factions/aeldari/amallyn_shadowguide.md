@@ -6,12 +6,12 @@
 
 ### Ranged Weapons
 | Weapon | Range | A | BS | S | AP | D | Keywords |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Ranger long rifle | 36" | 1 | 3+ | 4 | -1 | 2 | Heavy, Precision |
 
 ### Melee Weapons
 | Weapon | Range | A | WS | S | AP | D | Keywords |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Power blade | Melee | 4 | 3+ | 4 | -2 | 1 | - |
 
 ### Abilities

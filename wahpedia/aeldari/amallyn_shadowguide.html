@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasheet - Amallyn Shadowguide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-teal: #1b3d3d;
+            --medium-teal: #2b5757;
+            --light-teal: #d6e3e3;
+            --stat-bg: #dce7e7;
+            --stat-border: #8ba5a5;
+            --points-red: #9e2a2b;
+            --text-black: #000000;
+            --text-white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .datasheet {
+            width: 1000px;
+            background-color: white;
+            border: 2px solid var(--dark-teal);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        /* --- Header Section --- */
+        .header {
+            background-color: var(--dark-teal);
+            color: var(--text-white);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* The "swoosh" shape from the original */
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 48% 60%, 42% 100%, 0 100%);
+            height: 90px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 38px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .header .base-size {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-left: 10px;
+        }
+
+        /* --- Stats Row (Beveled Boxes) --- */
+        .stats-container {
+            display: flex;
+            padding: 10px 30px;
+            gap: 12px;
+            margin-top: -15px; /* Pulls stats up into the header void */
+        }
+
+        .stat-box {
+            background-color: var(--stat-bg);
+            border: 2px solid var(--stat-border);
+            /* Beveled corners using clip-path */
+            clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0% calc(100% - 8px), 0% 8px);
+            width: 75px;
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark-teal);
+            margin-bottom: 2px;
+        }
+
+        .stat-val {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dark-teal);
+        }
+
+        /* --- Invulnerable Save Badge (Shield Shape) --- */
+        .invuln-container {
+            padding-left: 135px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .invuln-badge {
+            background-color: var(--medium-teal);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 0 0 10px;
+            font-weight: 800;
+            font-size: 14px;
+            height: 40px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 95% 100%, 5% 100%, 0 80%);
+        }
+
+        .invuln-val {
+            background: white;
+            color: var(--dark-teal);
+            font-size: 24px;
+            font-weight: 900;
+            padding: 0 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%); /* Keeps it square inside */
+        }
+
+        /* --- Main Content Grid --- */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1.2fr;
+            border-top: 2px solid var(--medium-teal);
+        }
+
+        .left-col { border-right: 2px solid var(--medium-teal); }
+
+        .section-header {
+            background-color: var(--medium-teal);
+            color: white;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 17px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .weapon-labels {
+            display: flex;
+            gap: 25px;
+            font-size: 11px;
+            opacity: 0.9;
+            padding-right: 10px;
+        }
+
+        .weapon-labels span { width: 30px; text-align: center; }
+        .weapon-labels .range-label { width: 50px; }
+
+        .weapon-row {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .weapon-name-block b { font-size: 18px; display: block; margin-bottom: 5px; }
+        
+        .tag {
+            background: #e0eaea;
+            border-bottom: 1px solid #b0caca;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+
+        .weapon-stats {
+            display: flex;
+            gap: 25px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .weapon-stats span { width: 30px; }
+        .weapon-stats .range-val { width: 50px; }
+
+        /* --- Right Column (Abilities) --- */
+        .ability-content { padding: 20px; }
+        
+        .ability-item { margin-bottom: 20px; line-height: 1.4; font-size: 15px; }
+        
+        .ability-header {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .dotted { border-bottom: 1px dotted black; }
+
+        .composition-box {
+            padding: 20px;
+            position: relative;
+            min-height: 120px;
+            background: #fafafa;
+        }
+
+        .points-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: var(--points-red);
+            color: white;
+            padding: 10px 15px;
+            font-weight: 900;
+            font-size: 26px;
+            /* Slanted badge shape */
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--dark-teal);
+            color: white;
+            padding: 12px 25px;
+            display: grid;
+            grid-template-columns: 1.8fr 1.2fr;
+            font-size: 14px;
+            border-top: 2px solid white;
+        }
+
+        .footer b { text-transform: uppercase; margin-right: 8px; font-weight: 800; }
+        .footer-divider { border-left: 3px solid white; padding-left: 20px; }
+
+    </style>
+</head>
+<body>
+
+<div class="datasheet">
+    <div class="header">
+        <h1>Amallyn Shadowguide <span class="base-size">[ø32mm]</span></h1>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-box"><div class="stat-label">M</div><div class="stat-val">7"</div></div>
+        <div class="stat-box"><div class="stat-label">T</div><div class="stat-val">3</div></div>
+        <div class="stat-box"><div class="stat-label">Sv</div><div class="stat-val">5+</div></div>
+        <div class="stat-box"><div class="stat-label">W</div><div class="stat-val">3</div></div>
+        <div class="stat-box"><div class="stat-label">Ld</div><div class="stat-val">6+</div></div>
+        <div class="stat-box"><div class="stat-label">OC</div><div class="stat-val">1</div></div>
+    </div>
+
+    <div class="invuln-container">
+        <div class="invuln-badge">
+            <span class="invuln-val">4+</span>
+            INVULNERABLE SAVE
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="left-col">
+            <div class="section-header">
+                <span>Ranged Weapons</span>
+                <div class="weapon-labels">
+                    <span class="range-label">RANGE</span><span>A</span><span>BS</span><span>S</span><span>AP</span><span>D</span>
+                </div>
+            </div>
+            <div class="weapon-row">
+                <div class="weapon-name-block">
+                    <b>Ranger long rifle</b>
+                    <span class="tag">Heavy</span><span class="tag">Precision</span>
+                </div>
+                <div class="weapon-stats">
+                    <span class="range-val">36"</span><span>1</span><span>3+</span><span>4</span><span>-1</span><span>2</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <span>Melee Weapons</span>
+                <div class="weapon-labels">
+                    <span class="range-label">RANGE</span><span>A</span><span>WS</span><span>S</span><span>AP</span><span>D</span>
+                </div>
+            </div>
+            <div class="weapon-row">
+                <div class="weapon-name-block">
+                    <b>Power blade</b>
+                </div>
+                <div class="weapon-stats">
+                    <span class="range-val">Melee</span><span>4</span><span>3+</span><span>4</span><span>-2</span><span>1</span>
+                </div>
+            </div>
+
+            <div class="section-header">Wargear Options</div>
+            <div style="padding: 20px; font-size: 15px;">■ None</div>
+        </div>
+
+        <div class="right-col">
+            <div class="section-header">Abilities</div>
+            <div class="ability-content">
+                <div class="ability-item">
+                    <span class="ability-header">Core:</span> <span class="dotted">Infiltrators</span>, <span class="dotted">Lone Operative</span>, <span class="dotted">Stealth</span>
+                </div>
+                <div class="ability-item">
+                    <span class="ability-header">Faction:</span> <span class="dotted">Battle Focus</span>
+                </div>
+                <div class="ability-item">
+                    <b>The Path Least Travelled:</b> If your army includes this model, after both players have deployed their armies and determined who has the first turn, you can select one <b>RANGERS</b> or <b>SHROUD RUNNERS</b> unit from your army and redeploy that unit.
+                </div>
+                <div class="ability-item">
+                    <b>Path of the Outcast:</b> Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9" of this model, it can make a Normal move of up to D6".
+                </div>
+            </div>
+
+            <div class="section-header">Unit Composition</div>
+            <div class="composition-box">
+                <p>■ 1 Amallyn Shadowguide – <b>EPIC HERO</b></p>
+                <p>■ <b>Equipped with:</b> ranger long rifle; power blade.</p>
+                <div class="points-badge">75</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div><b>Keywords:</b> Infantry, Character, Grenades, Epic Hero, Aeldari, Amallyn Shadowguide</div>
+        <div class="footer-divider"><b>Faction Keywords:</b> Asuryani</div>
+    </div>
+</div>
+
+</body>
+</html>
