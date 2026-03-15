@@ -47,6 +47,7 @@ This index provides links to all unique and common datasheets available to the S
 *   [Infernus Squad](infernus_squad.md)
 *   [Long Fangs](long_fangs.md)
 *   [Skyclaws](skyclaws.md)
+*   [Wolf Guard](wolf_guard.md)
 *   [Wolf Guard Headtakers](wolf_guard_headtakers.md)
 *   [Wolf Guard Terminators](wolf_guard_terminators.md)
 *   [Wolf Scouts](wolf_scouts.md)
