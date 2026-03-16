@@ -5,6 +5,8 @@ import argparse
 
 def clean_val(text):
     if not text: return ""
+    # Strip common markdown fluff and specifically "Datasheet:" prefix
+    text = re.sub(r'(?i)^Datasheet:\s*', '', text)
     return re.sub(r'[#*_]+', '', text).strip()
 
 def parse_md_table(content):
@@ -35,6 +37,7 @@ def extract_section(content, keywords):
 
 def parse_unit(content, filename, patches):
     name_search = re.search(r'^(?:#+)\s*(.*?)$', content, re.M)
+    # The clean_val function now strips "Datasheet:"
     name = clean_val(name_search.group(1)) if name_search else filename.replace('.md', '').replace('_', ' ').title()
 
     unit = {

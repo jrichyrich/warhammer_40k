@@ -3,180 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>40k Data Factory - Army Builder</title>
+    <title>40k Factory - Tactical Army Builder</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        :root {
-            --ink-black: #1a1a1a;
-            --ink-grey: #f4f4f4;
-            --accent: #2b5757;
-            --white: #ffffff;
-        }
-
+        :root { --ink-black: #1a1a1a; --ink-grey: #f4f4f4; --accent: #2b5757; --white: #ffffff; }
         * { box-sizing: border-box; }
-        body {
-            font-family: 'Roboto Condensed', sans-serif;
-            margin: 0;
-            background: #e0e0e0;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
+        body { font-family: 'Roboto Condensed', sans-serif; margin: 0; background: #e0e0e0; display: flex; height: 100vh; overflow: hidden; }
 
-        /* --- BUILDER UI STYLES --- */
-        #builder-ui {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-
-        .sidebar {
-            width: 350px;
-            background: var(--white);
-            border-right: 2px solid var(--ink-black);
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .header-bar {
-            background: var(--ink-black);
-            color: var(--white);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-bar h1 { margin: 0; font-family: 'Exo 2'; font-size: 20px; text-transform: uppercase; }
-
-        .search-box {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-
-        .unit-list {
-            flex: 1;
-            overflow-y: auto;
-            padding: 10px;
-        }
-
-        .unit-item {
-            padding: 12px;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
-        }
-
+        #builder-ui { display: flex; width: 100%; height: 100%; }
+        .sidebar { width: 350px; background: var(--white); border-right: 2px solid var(--ink-black); display: flex; flex-direction: column; box-shadow: 2px 0 10px rgba(0,0,0,0.1); }
+        .main-content { flex: 1; padding: 30px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; }
+        .header-bar { background: var(--ink-black); color: var(--white); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .header-bar h1 { margin: 0; font-family: 'Exo 2'; font-size: 18px; text-transform: uppercase; }
+        .search-box { padding: 15px; border-bottom: 1px solid #ddd; }
+        .search-box input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .unit-list { flex: 1; overflow-y: auto; padding: 10px; }
+        .unit-item { padding: 12px; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .unit-item:hover { background: var(--ink-grey); }
         .unit-item b { font-size: 15px; }
-        .unit-item span { font-size: 12px; color: #666; font-weight: bold; }
+        .unit-item span { font-size: 11px; color: #666; font-weight: bold; }
 
-        .roster-card {
-            background: var(--white);
-            border: 2px solid var(--ink-black);
-            padding: 20px;
-            min-height: 200px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+        .roster-card { background: var(--white); border: 2px solid var(--ink-black); padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .roster-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--ink-black); padding-bottom: 10px; margin-bottom: 20px; }
+        .points-tally { font-size: 36px; font-weight: 900; font-family: 'Exo 2'; color: var(--accent); }
+        
+        .roster-table { width: 100%; border-collapse: collapse; }
+        .roster-table th { text-align: left; padding: 10px; background: var(--ink-grey); font-size: 12px; }
+        .roster-table td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: middle; }
+        
+        select { padding: 8px; border: 1.5px solid var(--ink-black); border-radius: 4px; font-family: inherit; font-weight: bold; cursor: pointer; background: var(--white); }
+        .btn { padding: 8px 15px; font-family: 'Exo 2'; font-weight: 900; text-transform: uppercase; cursor: pointer; border: none; border-radius: 4px; }
+        .btn-add { background: var(--accent); color: white; }
+        .btn-remove { background: #c0392b; color: white; font-size: 18px; line-height: 1; padding: 5px 10px; }
+        .btn-print { background: var(--ink-black); color: white; width: 100%; margin-top: 25px; font-size: 18px; }
 
-        .roster-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--ink-black);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
-        .roster-header h2 { margin: 0; font-family: 'Exo 2'; text-transform: uppercase; }
-
-        .points-tally {
-            font-size: 32px;
-            font-weight: 900;
-            font-family: 'Exo 2';
-            color: var(--accent);
-        }
-
-        .roster-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .roster-table th { text-align: left; padding: 10px; background: var(--ink-grey); font-size: 12px; text-transform: uppercase; }
-        .roster-table td { padding: 12px 10px; border-bottom: 1px solid #eee; }
-
-        .btn {
-            padding: 10px 20px;
-            font-family: 'Exo 2';
-            font-weight: 900;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-            transition: opacity 0.2s;
-        }
-
-        .btn-add { background: var(--accent); color: white; padding: 5px 10px; font-size: 12px; }
-        .btn-remove { background: #c0392b; color: white; padding: 5px 10px; font-size: 12px; }
-        .btn-print { background: var(--ink-black); color: white; font-size: 16px; margin-top: 20px; }
-        .btn:hover { opacity: 0.8; }
-
-        /* --- PRINT STYLES (Established 10th Ed Look) --- */
         #print-view { display: none; background: white; width: 100%; }
-
         @media print {
             #builder-ui { display: none; }
             #print-view { display: block; }
-            body { background: white; padding: 0; }
             .datasheet { width: 100%; border: 1px solid black; page-break-inside: avoid; margin-bottom: 20px; }
         }
 
-        /* established datasheet styles from before */
         .datasheet { width: 1000px; background: white; border: 1.5px solid var(--ink-black); position: relative; margin: 0 auto 30px auto; }
-        .ds-header { border-bottom: 2.5px solid var(--ink-black); padding: 10px 25px; height: 60px; display: flex; align-items: center; }
+        .ds-header { border-bottom: 2.5px solid var(--ink-black); padding: 10px 25px; display: flex; align-items: center; }
         .ds-header h1 { margin: 0; font-family: 'Exo 2'; font-size: 30px; text-transform: uppercase; font-weight: 900; }
         .stats-bar { display: flex; padding: 12px 25px; gap: 10px; }
         .stat-box { border: 1.5px solid var(--ink-black); clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px); width: 70px; text-align: center; padding: 5px 0; }
         .stat-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #444; }
         .stat-val { font-family: 'Exo 2'; font-size: 22px; font-weight: 900; }
-        .invuln-badge { margin-left: 25px; margin-bottom: 10px; border: 1.5px solid var(--ink-black); display: inline-flex; align-items: center; padding: 4px 12px; font-weight: 800; font-size: 12px; clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
-        .invuln-val { font-size: 18px; font-weight: 900; margin-right: 8px; border-right: 1px solid #ccc; padding-right: 8px; }
         .grid { display: grid; grid-template-columns: 1.6fr 1.4fr; border-top: 1.5px solid var(--ink-black); }
         .left-col { border-right: 1.5px solid var(--ink-black); }
         .section-header { background: var(--ink-grey); padding: 5px 20px; text-transform: uppercase; font-weight: 800; font-size: 15px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink-black); }
-        .weapon-labels { display: flex; gap: 20px; font-size: 9px; font-weight: 700; opacity: 0.7; }
-        .weapon-labels span { width: 35px; text-align: center; }
-        .weapon-row { padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #ddd; }
-        .weapon-info b { font-size: 16px; display: block; }
-        .tag { border: 1px solid #999; padding: 1px 4px; font-size: 9px; font-weight: 700; text-transform: uppercase; margin-right: 3px; display: inline-block; margin-top: 2px; }
-        .weapon-stats { display: flex; gap: 20px; font-family: 'Exo 2'; font-size: 18px; font-weight: 900; text-align: center; }
-        .weapon-stats span { width: 35px; }
-        .md-content { padding: 15px 20px; font-size: 13.5px; line-height: 1.4; }
-        .md-content p, .md-content ul { margin: 0 0 10px 0; }
-        .comp-box { padding: 15px 20px; position: relative; min-height: 100px; }
-        .points-badge { position: absolute; bottom: 15px; right: 15px; border: 2.5px solid var(--ink-black); padding: 6px 15px; font-weight: 900; font-size: 24px; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+        .weapon-row { padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #ddd; }
+        .weapon-stats { display: flex; gap: 20px; font-family: 'Exo 2'; font-size: 18px; font-weight: 900; text-align: center; width: 300px; justify-content: space-around; }
+        .md-content { padding: 15px 20px; font-size: 13px; line-height: 1.4; }
+        .points-badge { position: absolute; bottom: 15px; right: 15px; border: 2.5px solid var(--ink-black); padding: 6px 15px; font-weight: 900; font-size: 24px; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); background: white; }
         .ds-footer { padding: 8px 25px; display: grid; grid-template-columns: 1fr 1fr; font-size: 11px; border-top: 1.5px solid var(--ink-black); background: #f9f9f9; }
     </style>
 </head>
@@ -193,10 +75,7 @@
             <input type="text" id="unit-search" placeholder="Search units..." oninput="filterUnits()">
         </div>
         <div class="unit-list" id="unit-list-container">
-            <!-- Units will be populated here -->
-            <div style="padding:20px; text-align:center; color:#888;">
-                Click "Load DB" and select a <b>database.json</b> file to start.
-            </div>
+            <div style="padding:20px; text-align:center; color:#888;">Load a <b>database.json</b> to begin.</div>
         </div>
     </div>
 
@@ -205,7 +84,7 @@
             <div class="roster-header">
                 <div>
                     <h2 id="faction-name">No Army Loaded</h2>
-                    <div style="font-size:12px; color:#666;">Standard Battle Order</div>
+                    <div style="font-size:12px; color:#666;">Battle-Ready Roster</div>
                 </div>
                 <div class="points-tally"><span id="total-points">0</span> pts</div>
             </div>
@@ -214,30 +93,24 @@
                 <thead>
                     <tr>
                         <th>Unit Name</th>
-                        <th style="width:100px">Points</th>
-                        <th style="width:80px">Qty</th>
+                        <th style="width:250px">Squad Configuration</th>
                         <th style="width:50px"></th>
                     </tr>
                 </thead>
-                <tbody id="roster-items">
-                    <!-- Selected units will appear here -->
-                </tbody>
+                <tbody id="roster-items"></tbody>
             </table>
 
-            <button class="btn btn-print" onclick="preparePrint()">Generate Printable Datasheets</button>
+            <button class="btn btn-print" onclick="preparePrint()">Finalize & Print Datasheets</button>
         </div>
     </div>
 </div>
 
-<div id="print-view">
-    <!-- Printable datacards generated here -->
-</div>
+<div id="print-view"></div>
 
 <script>
     let db = { units: [] };
     let myRoster = [];
 
-    // 1. Handle File Upload
     document.getElementById('db-upload').addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (!file) return;
@@ -250,45 +123,54 @@
         reader.readAsText(file);
     });
 
-    // 2. Render Sidebar
+    // PARSE TIERS: "4 models: 160, 5 models: 200" -> [{label: "4 models", value: 160}, ...]
+    function parseTiers(pointStr) {
+        if (!pointStr || pointStr === "-") return [{ label: "Standard", value: 0 }];
+        
+        // Handle simple list "160, 200" vs labeled list "4 models: 160"
+        return pointStr.split(',').map(part => {
+            if (part.includes(':')) {
+                const [label, val] = part.split(':');
+                return { label: label.trim(), value: parseInt(val.trim()) };
+            } else {
+                return { label: "Unit Cost", value: parseInt(part.trim()) };
+            }
+        }).filter(p => !isNaN(p.value));
+    }
+
     function renderUnitList(filter = '') {
         const container = document.getElementById('unit-list-container');
         const filtered = db.units.filter(u => u.name.toLowerCase().includes(filter.toLowerCase()));
-        
         container.innerHTML = filtered.map(u => `
             <div class="unit-item" onclick="addToRoster('${u.id}')">
-                <div>
-                    <b>${u.name}</b><br>
-                    <span>${u.points} pts</span>
-                </div>
+                <div><b>${u.name}</b><br><span>${u.points} pts</span></div>
                 <div class="btn btn-add">+</div>
             </div>
         `).join('');
     }
 
-    function filterUnits() {
-        renderUnitList(document.getElementById('unit-search').value);
-    }
+    function filterUnits() { renderUnitList(document.getElementById('unit-search').value); }
 
-    // 3. Roster Logic
     function addToRoster(unitId) {
         const unit = db.units.find(u => u.id === unitId);
-        const existing = myRoster.find(r => r.id === unitId);
-        
-        if (existing) {
-            existing.qty++;
-        } else {
-            myRoster.push({ ...unit, qty: 1 });
-        }
+        const tiers = parseTiers(unit.points);
+        myRoster.push({ 
+            ...JSON.parse(JSON.stringify(unit)), 
+            instanceId: Date.now() + Math.random(),
+            tiers: tiers,
+            selectedTier: tiers[0] 
+        });
         updateRosterUI();
     }
 
-    function removeFromRoster(unitId) {
-        const idx = myRoster.findIndex(r => r.id === unitId);
-        if (idx > -1) {
-            if (myRoster[idx].qty > 1) myRoster[idx].qty--;
-            else myRoster.splice(idx, 1);
-        }
+    function removeFromRoster(instanceId) {
+        myRoster = myRoster.filter(r => r.instanceId !== instanceId);
+        updateRosterUI();
+    }
+
+    function updateTier(instanceId, tierIndex) {
+        const unit = myRoster.find(r => r.instanceId === instanceId);
+        if (unit) unit.selectedTier = unit.tiers[tierIndex];
         updateRosterUI();
     }
 
@@ -297,14 +179,20 @@
         let total = 0;
 
         container.innerHTML = myRoster.map(u => {
-            const cost = parseInt(u.points) || 0;
-            total += (cost * u.qty);
+            total += u.selectedTier.value;
+            const tierOptions = u.tiers.map((t, idx) => 
+                `<option value="${idx}" ${t.value === u.selectedTier.value ? 'selected' : ''}>${t.label} - ${t.value} pts</option>`
+            ).join('');
+            
             return `
                 <tr>
                     <td><b>${u.name}</b></td>
-                    <td>${cost * u.qty} pts</td>
-                    <td>${u.qty}</td>
-                    <td><button class="btn btn-remove" onclick="removeFromRoster('${u.id}')">×</button></td>
+                    <td>
+                        ${u.tiers.length > 1 
+                            ? `<select onchange="updateTier(${u.instanceId}, this.value)">${tierOptions}</select>` 
+                            : `<b>${u.selectedTier.label}: ${u.selectedTier.value} pts</b>`}
+                    </td>
+                    <td><button class="btn btn-remove" onclick="removeFromRoster(${u.instanceId})">×</button></td>
                 </tr>
             `;
         }).join('');
@@ -312,56 +200,37 @@
         document.getElementById('total-points').innerText = total;
     }
 
-    // 4. Print Rendering
     function preparePrint() {
-        if (myRoster.length === 0) {
-            alert("Your roster is empty!");
-            return;
-        }
-
+        if (myRoster.length === 0) { alert("Your roster is empty!"); return; }
         const printContainer = document.getElementById('print-view');
+        
         printContainer.innerHTML = myRoster.map(u => `
             <div class="datasheet">
                 <div class="ds-header"><h1>${u.name}</h1></div>
                 <div class="stats-bar">
-                    ${['M','T','Sv','W','Ld','OC'].map(s => `
-                        <div class="stat-box">
-                            <div class="stat-label">${s}</div>
-                            <div class="stat-val">${u.stats[s] || '-'}</div>
-                        </div>
-                    `).join('')}
+                    ${['M','T','Sv','W','Ld','OC'].map(s => `<div class="stat-box"><div class="stat-label">${s}</div><div class="stat-val">${u.stats[s] || '-'}</div></div>`).join('')}
                 </div>
-                ${u.invuln !== '-' ? `<div class="invuln-badge"><span class="invuln-val">${u.invuln}</span> INVULNERABLE SAVE</div>` : '<div style="height:12px"></div>'}
                 <div class="grid">
                     <div class="left-col">
-                        ${u.weapons.ranged.length ? `<div class="section-header"><span>Ranged Weapons</span><div class="weapon-labels"><span>RNG</span><span>A</span><span>BS</span><span>S</span><span>AP</span><span>D</span></div></div>${u.weapons.ranged.map(w => `
-                            <div class="weapon-row">
-                                <div class="weapon-info"><b>${w.name}</b><div>${w.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div></div>
-                                <div class="weapon-stats"><span>${w.rng}</span><span>${w.a}</span><span>${w.skill}</span><span>${w.s}</span><span>${w.ap}</span><span>${w.d}</span></div>
-                            </div>
-                        `).join('')}` : ''}
-                        ${u.weapons.melee.length ? `<div class="section-header"><span>Melee Weapons</span><div class="weapon-labels"><span>RNG</span><span>A</span><span>WS</span><span>S</span><span>AP</span><span>D</span></div></div>${u.weapons.melee.map(w => `
-                            <div class="weapon-row">
-                                <div class="weapon-info"><b>${w.name}</b><div>${w.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div></div>
-                                <div class="weapon-stats"><span>${w.rng}</span><span>${w.a}</span><span>${w.skill}</span><span>${w.s}</span><span>${w.ap}</span><span>${w.d}</span></div>
-                            </div>
-                        `).join('')}` : ''}
+                        ${u.weapons.ranged.length ? `<div class="section-header">Ranged Weapons</div>${u.weapons.ranged.map(w => renderWeapon(w)).join('')}` : ''}
+                        ${u.weapons.melee.length ? `<div class="section-header">Melee Weapons</div>${u.weapons.melee.map(w => renderWeapon(w)).join('')}` : ''}
                     </div>
                     <div class="right-col">
                         <div class="section-header">Abilities</div>
                         <div class="md-content">${marked.parse(u.abilities_raw)}</div>
-                        <div class="section-header">Unit Composition</div>
-                        <div class="comp-box">
-                            <div class="md-content" style="padding:0">${marked.parse(u.composition_raw)}</div>
-                            <div class="points-badge">${u.points}</div>
-                        </div>
+                        <div class="section-header">Unit Composition (${u.selectedTier.label})</div>
+                        <div class="md-content">${marked.parse(u.composition_raw)}</div>
+                        <div class="points-badge">${u.selectedTier.value} pts</div>
                     </div>
                 </div>
                 <div class="ds-footer"><div><b>Keywords:</b> ${u.keywords}</div><div><b>Faction:</b> ${u.faction}</div></div>
             </div>
         `).join('');
-
         window.print();
+    }
+
+    function renderWeapon(w) {
+        return `<div class="weapon-row"><div><b>${w.name}</b><br><small>${w.tags.join(', ')}</small></div><div class="weapon-stats"><span>${w.rng}</span><span>${w.a}</span><span>${w.skill}</span><span>${w.s}</span><span>${w.ap}</span><span>${w.d}</span></div></div>`;
     }
 </script>
 </body>

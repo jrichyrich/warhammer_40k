@@ -1,0 +1,191 @@
+{
+  "instruction": "Extract the point cost from the slanted red badge in the bottom-right corner.",
+  "units_to_audit": [
+    {
+      "id": "agamatus_custodians",
+      "name": "Datasheet: Agamatus Custodians",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Agamatus-Custodians.png"
+    },
+    {
+      "id": "aleya",
+      "name": "Datasheet: Aleya",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Aleya.png"
+    },
+    {
+      "id": "allarus_custodians",
+      "name": "Datasheet: Allarus Custodians",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Allarus-Custodians.png"
+    },
+    {
+      "id": "anathema_psykana_rhino",
+      "name": "Datasheet: Anathema Psykana Rhino",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Anathema-Psykana-Rhino.png"
+    },
+    {
+      "id": "aquilon_custodians",
+      "name": "Datasheet: Aquilon Custodians",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Aquilon-Custodians.png"
+    },
+    {
+      "id": "ares_gunship",
+      "name": "Datasheet: Ares Gunship",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Ares-Gunship.png"
+    },
+    {
+      "id": "blade_champion",
+      "name": "Datasheet: Blade Champion",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Blade-Champion.png"
+    },
+    {
+      "id": "caladius_grav_tank",
+      "name": "Datasheet: Caladius Grav-tank",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Caladius-Grav-tank.png"
+    },
+    {
+      "id": "contemptor_achillus_dreadnought",
+      "name": "Datasheet: Contemptor-Achillus Dreadnought",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Contemptor-achillus-Dreadnought.png"
+    },
+    {
+      "id": "contemptor_galatus_dreadnought",
+      "name": "Datasheet: Contemptor-Galatus Dreadnought",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Contemptor-galatus-Dreadnought.png"
+    },
+    {
+      "id": "coronus_grav_carrier",
+      "name": "Datasheet: Coronus Grav-carrier",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Coronus-Grav-carrier.png"
+    },
+    {
+      "id": "custodian_guard",
+      "name": "Datasheet: Custodian Guard",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Custodian-Guard.png"
+    },
+    {
+      "id": "custodian_guard_with_adrasite_and_pyrithite_spears",
+      "name": "Datasheet: Custodian Guard with Adrasite and Pyrithite Spears",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Custodian-Guard-With-Adrasite-And-Pyrithite-Spears.png"
+    },
+    {
+      "id": "custodian_wardens",
+      "name": "Datasheet: Custodian Wardens",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Custodian-Wardens.png"
+    },
+    {
+      "id": "knight_centura",
+      "name": "Datasheet: Knight-Centura",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Knight-centura.png"
+    },
+    {
+      "id": "orion_assault_dropship",
+      "name": "Datasheet: Orion Assault Dropship",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Orion-Assault-Dropship.png"
+    },
+    {
+      "id": "pallas_grav_attack",
+      "name": "Datasheet: Pallas Grav-attack",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Pallas-Grav-attack.png"
+    },
+    {
+      "id": "prosecutors",
+      "name": "Datasheet: Prosecutors",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Prosecutors.png"
+    },
+    {
+      "id": "sagittarum_custodians",
+      "name": "Datasheet: Sagittarum Custodians",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Sagittarum-Custodians.png"
+    },
+    {
+      "id": "shield_captain",
+      "name": "Datasheet: Shield-Captain",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Shield-captain.png"
+    },
+    {
+      "id": "shield_captain_in_allarus_terminator_armour",
+      "name": "Datasheet: Shield-Captain in Allarus Terminator Armour",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Shield-captain-In-Allarus-Terminator-Armour.png"
+    },
+    {
+      "id": "shield_captain_on_dawneagle_jetbike",
+      "name": "Datasheet: Shield-Captain on Dawneagle Jetbike",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Shield-captain-On-Dawneagle-Jetbike.png"
+    },
+    {
+      "id": "telemon_heavy_dreadnought",
+      "name": "Datasheet: Telemon Heavy Dreadnought",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Telemon-Heavy-Dreadnought.png"
+    },
+    {
+      "id": "trajann_valoris",
+      "name": "Datasheet: Trajann Valoris",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Trajann-Valoris.png"
+    },
+    {
+      "id": "valerian",
+      "name": "Datasheet: Valerian",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Valerian.png"
+    },
+    {
+      "id": "venatari_custodians",
+      "name": "Datasheet: Venatari Custodians",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Venatari-Custodians.png"
+    },
+    {
+      "id": "venerable_contemptor_dreadnought",
+      "name": "Datasheet: Venerable Contemptor Dreadnought",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Venerable-Contemptor-Dreadnought.png"
+    },
+    {
+      "id": "venerable_land_raider",
+      "name": "Datasheet: Venerable Land Raider",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Venerable-Land-Raider.png"
+    },
+    {
+      "id": "vertus_praetors",
+      "name": "Datasheet: Vertus Praetors",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Vertus-Praetors.png"
+    },
+    {
+      "id": "vigilators",
+      "name": "Datasheet: Vigilators",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Vigilators.png"
+    },
+    {
+      "id": "witchseekers",
+      "name": "Datasheet: Witchseekers",
+      "image_exists": true,
+      "image_path": "/Users/jasricha/Documents/Github_Personal/wahpedia_capture/out/factions/adeptus-custodes/Witchseekers.png"
+    }
+  ]
+}

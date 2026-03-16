@@ -6,44 +6,42 @@ def main(faction_dir, image_dir):
     faction_name = os.path.basename(faction_dir.strip('/'))
     db_path = os.path.join(faction_dir, f"{faction_name}_database.json")
     
-    if not os.path.exists(db_path):
-        print(f"Error: {db_path} not found. Run ingest.py first.")
-        return
-
     with open(db_path, 'r') as f:
         db = json.load(f)
 
-    # 1. Identify units missing points
+    images = os.listdir(image_dir)
     missing = []
+    
     for unit in db['units']:
         if unit['points'] == "-" or unit['points'] == "0":
-            # Try to find a matching image
-            img_name = unit['name'].replace(' ', '-').replace('(', '').replace(')', '') + ".png"
-            img_path = os.path.join(image_dir, img_name)
+            clean_name = unit['name'].replace('Datasheet:', '').strip()
+            slug = clean_name.replace(' ', '-').replace('(', '').replace(')', '').replace(':', '')
+            img_name = slug + ".png"
             
-            # Fuzzy match fallback
-            if not os.path.exists(img_path):
-                # Try underscores
-                img_name = unit['id'] + ".png"
-                img_path = os.path.join(image_dir, img_name)
+            match = None
+            # 1. Direct Slug Match
+            for img in images:
+                if img.lower() == img_name.lower():
+                    match = img
+                    break
+            
+            # 2. Contains Match
+            if not match:
+                for img in images:
+                    img_clean = img.replace('.png', '').replace('-', ' ').lower()
+                    if clean_name.lower() in img_clean or img_clean in clean_name.lower():
+                        match = img
+                        break
 
             missing.append({
                 "id": unit['id'],
                 "name": unit['name'],
-                "image_exists": os.path.exists(img_path),
-                "image_path": img_path if os.path.exists(img_path) else "MISSING"
+                "image_exists": match is not None,
+                "image_path": os.path.join(image_dir, match) if match else "MISSING"
             })
 
-    if not missing:
-        print("✅ All units have points! No audit needed.")
-        return
-
-    # 2. Generate the "Audit Request" for the AI
-    print(f"\n🚨 Found {len(missing)} units missing points.")
-    print("-" * 30)
-    
     audit_request = {
-        "instruction": "Extract the point cost from the slanted red badge in the bottom-right corner of these images.",
+        "instruction": "Extract the point cost from the slanted red badge in the bottom-right corner.",
         "units_to_audit": [m for m in missing if m['image_exists']]
     }
 
@@ -51,8 +49,10 @@ def main(faction_dir, image_dir):
     with open(request_file, 'w') as f:
         json.dump(audit_request, f, indent=2)
 
-    print(f"📝 Audit request saved to: {request_file}")
-    print(f"👉 You can now pass this file to a Vision AI to get the missing points.")
+    print(f"🚨 Found {len(audit_request['units_to_audit'])} units matching images out of {len(missing)} missing points.")
+    if len(audit_request['units_to_audit']) < len(missing):
+        unmatched = [m['name'] for m in missing if not m['image_exists']]
+        print(f"⚠️ Unmatched: {unmatched[:5]}...")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
