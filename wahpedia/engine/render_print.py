@@ -14,92 +14,196 @@ def main(db_path):
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{FACTION}} Roster - Print Edition</title>
+    <title>{{FACTION}} Roster - High Fidelity Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        :root { --ink-black: #1a1a1a; --ink-grey: #f4f4f4; --link-color: #2b5757; }
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Roboto Condensed', sans-serif; background: #bbb; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
-        .toc-container { width: 1000px; background: white; border: 1.5px solid var(--ink-black); padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .toc-title { font-family: 'Exo 2', sans-serif; font-size: 28px; text-transform: uppercase; font-weight: 900; margin-top: 0; border-bottom: 2px solid var(--ink-black); padding-bottom: 10px; margin-bottom: 20px; }
-        .toc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-        .toc-link { color: var(--link-color); text-decoration: none; font-weight: 700; font-size: 13.5px; padding: 3px 6px; border-radius: 4px; }
-        .toc-link:hover { background: var(--ink-grey); text-decoration: underline; }
-        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--ink-black); color: white; padding: 10px 15px; text-decoration: none; font-weight: bold; border-radius: 5px; opacity: 0.8; z-index: 1000; }
-        .datasheet { width: 1000px; background: white; border: 1.5px solid var(--ink-black); position: relative; page-break-inside: avoid; box-shadow: 0 5px 15px rgba(0,0,0,0.2); scroll-margin-top: 20px; }
-        .header { border-bottom: 2.5px solid var(--ink-black); padding: 10px 25px; height: 60px; display: flex; align-items: center; }
-        .header h1 { margin: 0; font-family: 'Exo 2', sans-serif; font-size: 30px; text-transform: uppercase; font-weight: 900; }
-        .stats-bar { display: flex; padding: 12px 25px; gap: 10px; }
-        .stat-box { border: 1.5px solid var(--ink-black); clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px); width: 70px; text-align: center; padding: 5px 0; }
-        .stat-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #444; }
-        .stat-val { font-family: 'Exo 2', sans-serif; font-size: 22px; font-weight: 900; }
-        .invuln-badge { margin-left: 25px; margin-bottom: 10px; border: 1.5px solid var(--ink-black); display: inline-flex; align-items: center; padding: 4px 12px; font-weight: 800; font-size: 12px; clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
-        .invuln-val { font-size: 18px; font-weight: 900; margin-right: 8px; border-right: 1px solid #ccc; padding-right: 8px; }
-        .grid { display: grid; grid-template-columns: 1.6fr 1.4fr; border-top: 1.5px solid var(--ink-black); }
-        .left-col { border-right: 1.5px solid var(--ink-black); }
-        .section-header { background: var(--ink-grey); padding: 5px 20px; text-transform: uppercase; font-weight: 800; font-size: 15px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink-black); }
-        .weapon-labels { display: flex; gap: 20px; font-size: 9px; font-weight: 700; opacity: 0.7; }
-        .weapon-labels span { width: 35px; text-align: center; }
-        .weapon-row { padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #ddd; }
-        .weapon-info b { font-size: 16px; display: block; }
-        .tag { border: 1px solid #999; padding: 1px 4px; font-size: 9px; font-weight: 700; text-transform: uppercase; margin-right: 3px; display: inline-block; margin-top: 2px; }
-        .weapon-stats { display: flex; gap: 20px; font-family: 'Exo 2', sans-serif; font-size: 18px; font-weight: 900; text-align: center; }
-        .weapon-stats span { width: 35px; }
-        .md-content { padding: 15px 20px; font-size: 13.5px; line-height: 1.4; }
-        .md-content p, .md-content ul { margin: 0 0 10px 0; }
-        .md-content ul { padding-left: 20px; }
-        .comp-box { padding: 15px 20px; position: relative; min-height: 100px; font-size: 13.5px; }
-        .points { position: absolute; bottom: 15px; right: 15px; border: 2.5px solid var(--ink-black); padding: 6px 15px; font-weight: 900; font-size: 24px; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
-        .footer { padding: 8px 25px; display: grid; grid-template-columns: 1fr 1fr; font-size: 11px; border-top: 1.5px solid var(--ink-black); background: #f9f9f9; }
-        .footer b { text-transform: uppercase; font-weight: 800; }
-        @media print { body { background: white; padding: 0; gap: 15px; } .datasheet { width: 100%; box-shadow: none; } .toc-container, .back-to-top { display: none; } }
+        :root { --ink-black: #000000; --ink-grey: #eeeeee; --white: #ffffff; }
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+        body { font-family: 'Roboto Condensed', sans-serif; background: #999; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        
+        /* --- DATACARD CONTAINER --- */
+        .datasheet { width: 1050px; background: white; border: 2px solid var(--ink-black); position: relative; page-break-inside: avoid; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        
+        /* --- HEADER --- */
+        .ds-header { border-bottom: 3px solid var(--ink-black); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .ds-header h1 { margin: 0; font-family: 'Exo 2'; font-size: 38px; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
+
+        /* --- STATS BAR (Official Style) --- */
+        .stats-bar { display: flex; padding: 15px 30px; gap: 15px; align-items: flex-start; }
+        .stat-box { display: flex; flex-direction: column; align-items: center; min-width: 75px; }
+        .stat-label { font-size: 12px; font-weight: 900; text-transform: uppercase; border-bottom: 1.5px solid #000; width: 100%; text-align: center; margin-bottom: 5px; padding-bottom: 2px; }
+        .stat-val { font-family: 'Exo 2'; font-size: 28px; font-weight: 900; }
+
+        /* --- INVULN SHIELD --- */
+        .invuln-container { display: flex; align-items: center; margin-left: 30px; margin-bottom: 15px; gap: 10px; }
+        .shield-icon { 
+            background: #fdfdfd; border: 2px solid black; width: 50px; height: 50px; 
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Exo 2'; font-size: 22px; font-weight: 900;
+        }
+        .invuln-label { font-weight: 900; font-size: 14px; text-transform: uppercase; }
+
+        /* --- MAIN GRID --- */
+        .main-grid { display: grid; grid-template-columns: 1.6fr 1.4fr; border-top: 3px solid var(--ink-black); }
+        .left-col { border-right: 3px solid var(--ink-black); }
+        
+        .section-header { background: var(--ink-grey); padding: 8px 25px; text-transform: uppercase; font-weight: 900; font-size: 18px; border-bottom: 2px solid var(--ink-black); display: flex; justify-content: space-between; }
+        .weapon-row { padding: 12px 25px; border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center; }
+        .weapon-name { font-size: 18px; font-weight: 900; text-transform: uppercase; }
+        .weapon-tags { font-size: 10px; font-weight: 700; border: 1px solid #666; padding: 1px 4px; display: inline-block; margin-top: 4px; }
+        .weapon-stats { display: flex; gap: 20px; font-family: 'Exo 2'; font-size: 22px; font-weight: 900; min-width: 320px; justify-content: space-between; }
+        .weapon-stats span { width: 40px; text-align: center; }
+        .stat-labels-tiny { display: flex; gap: 20px; font-size: 10px; font-weight: 900; opacity: 0.6; min-width: 320px; justify-content: space-between; margin-bottom: -5px; padding-right: 25px; padding-top: 5px; }
+        .stat-labels-tiny span { width: 40px; text-align: center; }
+
+        /* --- ABILITIES --- */
+        .abilities-box { padding: 20px 25px; font-size: 15px; line-height: 1.3; }
+        .ability-item { margin-bottom: 12px; }
+        .ability-item b { text-transform: uppercase; }
+        .core-faction-line { border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 12px; font-weight: 900; text-transform: uppercase; font-size: 14px; }
+
+        /* --- DAMAGED BLOCK --- */
+        .damaged-block { background: #333; color: white; padding: 12px 25px; display: flex; align-items: center; gap: 20px; }
+        .damaged-block b { font-family: 'Exo 2'; text-transform: uppercase; font-size: 15px; display: block; }
+        .damaged-block p { margin: 0; font-size: 14px; }
+        .skull { font-size: 24px; }
+
+        /* --- UNIT COMPOSITION & POINTS --- */
+        .comp-container { padding: 20px 25px; position: relative; min-height: 120px; }
+        .points-badge { 
+            position: absolute; bottom: 15px; right: 15px; 
+            border: 4px solid black; padding: 10px 20px; 
+            font-size: 32px; font-weight: 900; font-family: 'Exo 2';
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            background: white;
+        }
+
+        /* --- FOOTER --- */
+        .ds-footer { border-top: 3px solid var(--ink-black); padding: 10px 30px; display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; background: #f9f9f9; }
+        .footer-label { font-weight: 900; text-transform: uppercase; margin-right: 5px; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .datasheet { width: 100%; box-shadow: none; border-width: 1px; }
+            .toc-container { display: none; }
+        }
     </style>
 </head>
-<body id="top">
-<div class="toc-container">
-    <h2 class="toc-title">{{FACTION}} Army Roster</h2>
-    <div class="toc-grid" id="toc-grid"></div>
-</div>
+<body>
+
 <div id="roster"></div>
-<a href="#top" class="back-to-top">↑ Top</a>
+
 <script>
     const units = {{UNITS_JSON}};
-    units.forEach(u => { u.domId = 'unit-' + u.name.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase(); });
-    document.getElementById('toc-grid').innerHTML = units.map(u => `<a href="#${u.domId}" class="toc-link">${u.name}</a>`).join('');
-    document.getElementById('roster').innerHTML = units.map(u => `
-        <div class="datasheet" id="${u.domId}">
-            <div class="header"><h1>${u.name}</h1></div>
-            <div class="stats-bar">
-                ${['M','T','Sv','W','Ld','OC'].map(s => `<div class="stat-box"><div class="stat-label">${s}</div><div class="stat-val">${u.stats[s] || '-'}</div></div>`).join('')}
+    
+    document.getElementById('roster').innerHTML = units.map(u => {
+        // High fidelity keyword cleanup
+        const cleanInvuln = (u.invuln || "").replace(':', '').trim();
+        
+        return `
+        <div class="datasheet">
+            <div class="ds-header">
+                <h1>${u.name}</h1>
             </div>
-            ${u.invuln !== '-' ? `<div class="invuln-badge"><span class="invuln-val">${u.invuln}</span> INVULNERABLE SAVE</div>` : '<div style="height:12px"></div>'}
-            <div class="grid">
-                <div class="left-col">
-                    ${u.weapons.ranged.length ? `<div class="section-header"><span>Ranged Weapons</span><div class="weapon-labels"><span>RNG</span><span>A</span><span>BS</span><span>S</span><span>AP</span><span>D</span></div></div>${u.weapons.ranged.map(w => renderWeapon(w)).join('')}` : ''}
-                    ${u.weapons.melee.length ? `<div class="section-header"><span>Melee Weapons</span><div class="weapon-labels"><span>RNG</span><span>A</span><span>WS</span><span>S</span><span>AP</span><span>D</span></div></div>${u.weapons.melee.map(w => renderWeapon(w)).join('')}` : ''}
+            
+            <div class="stats-bar">
+                ${['M','T','Sv','W','Ld','OC'].map(s => `
+                    <div class="stat-box">
+                        <div class="stat-label">${s}</div>
+                        <div class="stat-val">${u.stats[s] || '-'}</div>
+                    </div>
+                `).join('')}
+            </div>
+
+            ${cleanInvuln && cleanInvuln !== '-' ? `
+                <div class="invuln-container">
+                    <div class="shield-icon">${cleanInvuln}</div>
+                    <div class="invuln-label">Invulnerable Save</div>
                 </div>
+            ` : '<div style="height:20px"></div>'}
+
+            <div class="main-grid">
+                <div class="left-col">
+                    ${u.weapons.ranged.length ? `
+                        <div class="section-header">
+                            <span>Ranged Weapons</span>
+                            <div class="stat-labels-tiny">
+                                <span>RNG</span><span>A</span><span>BS</span><span>S</span><span>AP</span><span>D</span>
+                            </div>
+                        </div>
+                        ${u.weapons.ranged.map(w => renderWeapon(w, 'BS')).join('')}
+                    ` : ''}
+                    
+                    ${u.weapons.melee.length ? `
+                        <div class="section-header">
+                            <span>Melee Weapons</span>
+                            <div class="stat-labels-tiny">
+                                <span>RNG</span><span>A</span><span>WS</span><span>S</span><span>AP</span><span>D</span>
+                            </div>
+                        </div>
+                        ${u.weapons.melee.map(w => renderWeapon(w, 'WS')).join('')}
+                    ` : ''}
+                </div>
+                
                 <div class="right-col">
                     <div class="section-header">Abilities</div>
-                    <div class="md-content">${marked.parse(u.abilities_raw)}</div>
+                    <div class="abilities-box">
+                        ${u.core_abilities ? `<div class="core-faction-line">Core: ${u.core_abilities}</div>` : ''}
+                        ${u.faction_abilities ? `<div class="core-faction-line">Faction: ${u.faction_abilities}</div>` : ''}
+                        <div class="md-content">${marked.parse(u.abilities_raw)}</div>
+                    </div>
+
+                    ${u.damaged_state ? `
+                        <div class="damaged-block">
+                            <span class="skull">💀</span>
+                            <div>
+                                <b>DAMAGED: ${u.damaged_state.split(':')[0]}</b>
+                                <p>${u.damaged_state.split(':').slice(1).join(':').trim()}</p>
+                            </div>
+                        </div>
+                    ` : ''}
+
                     <div class="section-header">Unit Composition</div>
-                    <div class="comp-box">
-                        <div class="md-content" style="padding:0">${marked.parse(u.composition_raw)}</div>
-                        <div class="points">${u.points}</div>
+                    <div class="comp-container">
+                        <div class="md-content">${marked.parse(u.composition_raw)}</div>
+                        <div class="points-badge">${u.points}</div>
                     </div>
                 </div>
             </div>
-            <div class="footer"><div><b>Keywords:</b> ${u.keywords}</div><div style="border-left:1px solid #ddd;padding-left:15px"><b>Faction:</b> ${u.faction}</div></div>
+
+            <div class="ds-footer">
+                <div><span class="footer-label">Keywords:</span> ${u.keywords.toUpperCase()}</div>
+                <div style="border-left: 2px solid #ccc; padding-left: 20px;"><span class="footer-label">Faction:</span> ${u.faction.toUpperCase()}</div>
+            </div>
         </div>
-    `).join('');
-    function renderWeapon(w) {
-        return `<div class="weapon-row"><div class="weapon-info"><b>${w.name}</b><div>${w.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div></div><div class="weapon-stats"><span>${w.rng}</span><span>${w.a}</span><span>${w.skill}</span><span>${w.s}</span><span>${w.ap}</span><span>${w.d}</span></div></div>`;
+        `;
+    }).join('');
+
+    function renderWeapon(w, skillType) {
+        return `
+            <div class="weapon-row">
+                <div>
+                    <div class="weapon-name">${w.name}</div>
+                    ${(w.tags || []).map(t => `<span class="weapon-tags">${t}</span>`).join(' ')}
+                </div>
+                <div class="weapon-stats">
+                    <span>${w.rng || w.range}</span>
+                    <span>${w.a || w.attacks}</span>
+                    <span>${w.skill || w.bs || w.ws}</span>
+                    <span>${w.s || w.strength}</span>
+                    <span>${w.ap}</span>
+                    <span>${w.d || w.damage}</span>
+                </div>
+            </div>
+        `;
     }
 </script>
 </body>
 </html>
 """
-    final_html = html_template.replace("{{FACTION}}", faction).replace("{{UNITS_JSON}}", json.dumps(units))
+    final_html = html_template.replace("{{FACTION}}", faction.replace('_', ' ').title()).replace("{{UNITS_JSON}}", json.dumps(units))
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(final_html)
     print(f"Success: Rendered {len(units)} units to {output_path}")

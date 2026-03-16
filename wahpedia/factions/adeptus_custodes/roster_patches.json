@@ -1,38 +1,244 @@
 {
-  "points": {
-    "agamatus_custodians": "3 models: 225, 6 models: 450",
-    "aleya": "1 model: 65",
-    "allarus_custodians": "2 models: 110, 3 models: 165, 5 models: 275, 6 models: 330",
-    "anathema_psykana_rhino": "1 model: 75",
-    "aquilon_custodians": "3 models: 195, 6 models: 390",
-    "ares_gunship": "1 model: 580",
-    "blade_champion": "1 model: 120",
-    "caladius_grav_tank": "1 model: 215",
-    "contemptor_achillus_dreadnought": "1 model: 155",
-    "contemptor_galatus_dreadnought": "1 model: 165",
-    "coronus_grav_carrier": "1 model: 200",
-    "custodian_guard_with_adrasite_and_pyrithite_spears": "5 models: 250",
-    "custodian_guard": "4 models: 160, 5 models: 200",
-    "custodian_wardens": "4 models: 210, 5 models: 260",
-    "knight_centura": "1 model: 55",
-    "orion_assault_dropship": "1 model: 690",
-    "pallas_grav_attack": "1 model: 105",
-    "prosecutors": "4 models: 40, 5 models: 50, 9 models: 75, 10 models: 85",
-    "sagittarum_custodians": "5 models: 225",
-    "shield_captain_in_allarus_terminator_armour": "1 model: 130",
-    "shield_captain_on_dawneagle_jetbike": "1 model: 150",
-    "shield_captain": "1 model: 120",
-    "telemon_heavy_dreadnought": "225",
-    "trajann_valoris": "1 model: 140",
-    "valerian": "1 model: 110",
-    "venatari_custodians": "3 models: 165, 6 models: 330",
-    "venerable_contemptor_dreadnought": "170",
-    "venerable_land_raider": "220",
-    "vertus_praetors": "2 models: 150, 3 models: 225",
-    "vigilators": "4 models: 45, 5 models: 55, 9 models: 90, 10 models: 100",
-    "witchseekers": "4 models: 45, 5 models: 55, 9 models: 90, 10 models: 100"
-  },
-  "stats": {},
-  "abilities": {},
-  "composition": {}
+  "full_overrides": {
+    "agamatus_custodians": {
+      "stats": {"M": "12\"", "T": "6", "Sv": "2+", "W": "4", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "3 models: 225, 6 models: 450",
+      "ranged": [{"name": "Twin las-pulsar", "rng": "24\"", "a": "2", "skill": "2+", "s": "9", "ap": "-1", "d": "2", "tags": ["Twin-linked"]}],
+      "melee": [{"name": "Interceptor lance", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": ["Lance"]}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Turbo-boost**: Add 6\" to Move when Advancing.",
+      "composition_raw": "3-6 Models", "keywords": "MOUNTED, FLY, ADEPTUS CUSTODES", "faction": "ADEPTUS CUSTODES"
+    },
+    "aleya": {
+      "stats": {"M": "6\"", "T": "3", "Sv": "3+", "W": "4", "Ld": "6+", "OC": "1"},
+      "invuln": "5+", "points": "1 model: 65",
+      "ranged": [],
+      "melee": [{"name": "Somnus", "rng": "Melee", "a": "4", "skill": "2+", "s": "6", "ap": "-3", "d": "3", "tags": ["Anti-Psyker 5+", "Devastating Wounds"]}],
+      "abilities_raw": "### Core\n* Feel No Pain 5+, Leader, Scouts 6\"\n\n### Datasheet\n* **Tactical Perception**: Fights First while leading.\n* **Tenacious Spirit**: Attack bonuses when below strength.",
+      "composition_raw": "1 Aleya - Epic Hero", "keywords": "CHARACTER, EPIC HERO, ANATHEMA PSYKANA", "faction": "ADEPTUS CUSTODES"
+    },
+    "allarus_custodians": {
+      "stats": {"M": "5\"", "T": "7", "Sv": "2+", "W": "4", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "2 models: 110, 3 models: 165, 5 models: 275, 6 models: 330",
+      "ranged": [{"name": "Balistus grenade launcher", "rng": "18\"", "a": "D6", "skill": "2+", "s": "4", "ap": "-1", "d": "1", "tags": ["Blast"]}],
+      "melee": [{"name": "Guardian spear", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": []}, {"name": "Castellan axe", "rng": "Melee", "a": "4", "skill": "2+", "s": "9", "ap": "-1", "d": "3", "tags": []}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Slayers of Tyrants**: Re-roll Wound rolls against Characters/Monsters/Vehicles.",
+      "composition_raw": "2-6 Models", "keywords": "INFANTRY, TERMINATOR", "faction": "ADEPTUS CUSTODES"
+    },
+    "anathema_psykana_rhino": {
+      "stats": {"M": "12\"", "T": "9", "Sv": "3+", "W": "10", "Ld": "6+", "OC": "2"},
+      "invuln": "-", "points": "1 model: 75",
+      "ranged": [{"name": "Storm bolter", "rng": "24\"", "a": "2", "skill": "3+", "s": "4", "ap": "0", "d": "1", "tags": ["Rapid Fire 2"]}],
+      "melee": [{"name": "Armoured tracks", "rng": "Melee", "a": "3", "skill": "4+", "s": "6", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Firing Deck 2, Daughters of the Abyss (FNP 3+ vs Psychic).",
+      "composition_raw": "1 Rhino", "keywords": "VEHICLE, TRANSPORT", "faction": "ADEPTUS CUSTODES"
+    },
+    "valerian": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "6", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 110",
+      "ranged": [{"name": "Gnosis", "rng": "24\"", "a": "3", "skill": "2+", "s": "4", "ap": "-1", "d": "2", "tags": ["Assault"]}],
+      "melee": [{"name": "Gnosis", "rng": "Melee", "a": "7", "skill": "2+", "s": "8", "ap": "-3", "d": "2", "tags": []}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Golden Laurels**: Worsen melee AP by 1.\n* **Hero of Lion's Gate**: Change 1 roll to a 6.",
+      "composition_raw": "1 Valerian - Epic Hero", "keywords": "CHARACTER, EPIC HERO, SHIELD-CAPTAIN, VALERIAN", "faction": "ADEPTUS CUSTODES"
+    },
+    "trajann_valoris": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "7", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 140",
+      "ranged": [{"name": "Eagle's Scream", "rng": "24\"", "a": "2", "skill": "2+", "s": "5", "ap": "-2", "d": "3", "tags": ["Assault"]}],
+      "melee": [{"name": "Watcher's Axe", "rng": "Melee", "a": "6", "skill": "2+", "s": "10", "ap": "-2", "d": "3", "tags": []}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Captain-General**: Ignore modifiers.\n* **Moment Shackle**: Once per battle choose buff.",
+      "composition_raw": "1 Trajann Valoris - Epic Hero", "keywords": "CHARACTER, EPIC HERO, TRAJANN VALORIS", "faction": "ADEPTUS CUSTODES"
+    },
+    "aquilon_custodians": {
+      "stats": {"M": "5\"", "T": "7", "Sv": "2+", "W": "4", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "3 models: 195, 6 models: 390",
+      "ranged": [{"name": "Lastrum storm bolter", "rng": "24\"", "a": "2", "skill": "2+", "s": "5", "ap": "-1", "d": "1", "tags": ["Rapid Fire 2"]}],
+      "melee": [{"name": "Solerite power gauntlet", "rng": "Melee", "a": "5", "skill": "2+", "s": "8", "ap": "-2", "d": "2", "tags": []}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Heavy Assault Infantry**: Re-roll Wound rolls of 1.",
+      "composition_raw": "3-6 Models", "keywords": "INFANTRY, TERMINATOR", "faction": "ADEPTUS CUSTODES"
+    },
+    "ares_gunship": {
+      "stats": {"M": "20+\"", "T": "12", "Sv": "2+", "W": "22", "Ld": "6+", "OC": "0"},
+      "invuln": "5+", "points": "1 model: 580",
+      "ranged": [{"name": "Arachnus magna-blaze cannon", "rng": "48\"", "a": "3", "skill": "2+", "s": "18", "ap": "-4", "d": "D6+6", "tags": []}],
+      "melee": [{"name": "Armoured hull", "rng": "Melee", "a": "9", "skill": "4+", "s": "9", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Infernus Firebombs: Select unit moved over, mortal wounds on 6s.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, AIRCRAFT, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "blade_champion": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "6", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 120",
+      "ranged": [],
+      "melee": [{"name": "Vaultswords - Victus", "rng": "Melee", "a": "5", "skill": "2+", "s": "6", "ap": "-3", "d": "3", "tags": ["Devastating Wounds"]}],
+      "abilities_raw": "Swift Onslaught: Re-roll Charge rolls.",
+      "composition_raw": "1 Model", "keywords": "INFANTRY, CHARACTER", "faction": "ADEPTUS CUSTODES"
+    },
+    "caladius_grav_tank": {
+      "stats": {"M": "10\"", "T": "11", "Sv": "2+", "W": "14", "Ld": "6+", "OC": "4"},
+      "invuln": "5+", "points": "1 model: 215",
+      "ranged": [{"name": "Twin iliastus accelerator cannon", "rng": "48\"", "a": "4", "skill": "2+", "s": "10", "ap": "-1", "d": "3", "tags": ["Rapid Fire 4", "Twin-linked"]}],
+      "melee": [{"name": "Armoured hull", "rng": "Melee", "a": "4", "skill": "4+", "s": "6", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Advanced Firepower: Lethal Hits vs specific targets.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "contemptor_achillus_dreadnought": {
+      "stats": {"M": "6\"", "T": "9", "Sv": "2+", "W": "10", "Ld": "6+", "OC": "3"},
+      "invuln": "5+", "points": "1 model: 155",
+      "ranged": [{"name": "Twin adrathic destructor", "rng": "18\"", "a": "1", "skill": "2+", "s": "6", "ap": "-2", "d": "3", "tags": ["Twin-linked"]}],
+      "melee": [{"name": "Achillus dreadspear", "rng": "Melee", "a": "5", "skill": "2+", "s": "12", "ap": "-2", "d": "D6+1", "tags": ["Lance"]}],
+      "abilities_raw": "Dread Foe: Mortal wounds in melee.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, WALKER", "faction": "ADEPTUS CUSTODES"
+    },
+    "contemptor_galatus_dreadnought": {
+      "stats": {"M": "6\"", "T": "9", "Sv": "2+", "W": "10", "Ld": "6+", "OC": "3"},
+      "invuln": "4+", "points": "1 model: 165",
+      "ranged": [{"name": "Galatus warblade", "rng": "12\"", "a": "D6", "skill": "N/A", "s": "6", "ap": "-1", "d": "1", "tags": ["Torrent"]}],
+      "melee": [{"name": "Galatus warblade", "rng": "Melee", "a": "8", "skill": "2+", "s": "8", "ap": "-2", "d": "3", "tags": []}],
+      "abilities_raw": "Galatus Shield: -1 to Wound in melee.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, WALKER", "faction": "ADEPTUS CUSTODES"
+    },
+    "coronus_grav_carrier": {
+      "stats": {"M": "12\"", "T": "12", "Sv": "2+", "W": "16", "Ld": "6+", "OC": "5"},
+      "invuln": "5+", "points": "1 model: 200",
+      "ranged": [{"name": "Twin lastrum bolt cannon", "rng": "36\"", "a": "3", "skill": "2+", "s": "6", "ap": "-1", "d": "1", "tags": ["Sustained Hits 1"]}],
+      "melee": [{"name": "Armoured hull", "rng": "Melee", "a": "6", "skill": "4+", "s": "8", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Fire Support: Re-roll wounds for disembarked units.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, TRANSPORT, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "custodian_guard": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "3", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "4 models: 160, 5 models: 200",
+      "ranged": [{"name": "Guardian spear", "rng": "24\"", "a": "2", "skill": "2+", "s": "4", "ap": "-1", "d": "2", "tags": ["Assault"]}],
+      "melee": [{"name": "Guardian spear", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": []}],
+      "abilities_raw": "### Faction\n* Martial Ka'tah\n\n### Datasheet\n* **Stand Vigil**: Objective control bonuses.",
+      "composition_raw": "4-5 Models", "keywords": "INFANTRY, BATTLELINE", "faction": "ADEPTUS CUSTODES"
+    },
+    "custodian_wardens": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "3", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "4 models: 210, 5 models: 260",
+      "ranged": [{"name": "Guardian spear", "rng": "24\"", "a": "2", "skill": "2+", "s": "4", "ap": "-1", "d": "2", "tags": ["Assault"]}],
+      "melee": [{"name": "Guardian spear", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": []}],
+      "abilities_raw": "Resolute Will: -1 to Wound if Strength is greater.",
+      "composition_raw": "4-5 Models", "keywords": "INFANTRY", "faction": "ADEPTUS CUSTODES"
+    },
+    "knight_centura": {
+      "stats": {"M": "6\"", "T": "3", "Sv": "3+", "W": "4", "Ld": "6+", "OC": "1"},
+      "invuln": "5+", "points": "1 model: 55",
+      "ranged": [{"name": "Witchseeker flamer", "rng": "12\"", "a": "D6", "skill": "N/A", "s": "4", "ap": "0", "d": "1", "tags": ["Torrent"]}],
+      "melee": [{"name": "Executioner greatblade", "rng": "Melee", "a": "3", "skill": "2+", "s": "5", "ap": "-2", "d": "2", "tags": ["Anti-Psyker 5+"]}],
+      "abilities_raw": "Corner the Quarry: Penalty to fallback tests.",
+      "composition_raw": "1 Model", "keywords": "INFANTRY, CHARACTER, ANATHEMA PSYKANA", "faction": "ADEPTUS CUSTODES"
+    },
+    "orion_assault_dropship": {
+      "stats": {"M": "20+\"", "T": "12", "Sv": "2+", "W": "22", "Ld": "6+", "OC": "0"},
+      "invuln": "5+", "points": "1 model: 690",
+      "ranged": [{"name": "Twin lastrum bolt cannon", "rng": "36\"", "a": "3", "skill": "2+", "s": "6", "ap": "-1", "d": "1", "tags": ["Sustained Hits 1"]}],
+      "melee": [{"name": "Armoured hull", "rng": "Melee", "a": "9", "skill": "4+", "s": "9", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Assault Dropship: Disembarking units can charge.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, AIRCRAFT, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "pallas_grav_attack": {
+      "stats": {"M": "12\"", "T": "8", "Sv": "2+", "W": "9", "Ld": "6+", "OC": "2"},
+      "invuln": "5+", "points": "1 model: 105",
+      "ranged": [{"name": "Twin arachnus blaze cannon", "rng": "24\"", "a": "8", "skill": "2+", "s": "5", "ap": "-1", "d": "1", "tags": ["Twin-linked"]}],
+      "melee": [{"name": "Armoured hull", "rng": "Melee", "a": "3", "skill": "4+", "s": "6", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Merciless Hunter: +1 to Wound vs weak units.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "prosecutors": {
+      "stats": {"M": "6\"", "T": "3", "Sv": "3+", "W": "1", "Ld": "6+", "OC": "2"},
+      "points": "4 models: 40, 5 models: 50, 9 models: 75, 10 models: 85",
+      "ranged": [{"name": "Boltgun", "rng": "24\"", "a": "1", "skill": "3+", "s": "4", "ap": "0", "d": "1", "tags": ["Rapid Fire 1"]}],
+      "melee": [{"name": "Close combat weapon", "rng": "Melee", "a": "2", "skill": "3+", "s": "3", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Purity of Execution: Precision vs Psykers.",
+      "composition_raw": "4-10 Models", "keywords": "INFANTRY, ANATHEMA PSYKANA", "faction": "ADEPTUS CUSTODES"
+    },
+    "sagittarum_custodians": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "3", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "5 models: 225",
+      "ranged": [{"name": "Adrastus bolt caliver", "rng": "36\"", "a": "3", "skill": "2+", "s": "5", "ap": "-1", "d": "2", "tags": ["Sustained Hits 1"]}],
+      "melee": [{"name": "Misericordia", "rng": "Melee", "a": "4", "skill": "2+", "s": "5", "ap": "-2", "d": "1", "tags": []}],
+      "abilities_raw": "Saturation Volleys: Units shot are suppressed.",
+      "composition_raw": "5 Models", "keywords": "INFANTRY", "faction": "ADEPTUS CUSTODES"
+    },
+    "shield_captain": {
+      "stats": {"M": "6\"", "T": "6", "Sv": "2+", "W": "6", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 120",
+      "ranged": [{"name": "Guardian spear", "rng": "24\"", "a": "2", "skill": "2+", "s": "4", "ap": "-1", "d": "2", "tags": ["Assault"]}],
+      "melee": [{"name": "Guardian spear", "rng": "Melee", "a": "7", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": []}],
+      "abilities_raw": "Strategic Mastery: Free Stratagem use.",
+      "composition_raw": "1 Model", "keywords": "INFANTRY, CHARACTER, SHIELD-CAPTAIN", "faction": "ADEPTUS CUSTODES"
+    },
+    "shield_captain_in_allarus_terminator_armour": {
+      "stats": {"M": "5\"", "T": "7", "Sv": "2+", "W": "7", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 130",
+      "ranged": [{"name": "Balistus grenade launcher", "rng": "18\"", "a": "D6", "skill": "2+", "s": "4", "ap": "-1", "d": "1", "tags": ["Blast"]}],
+      "melee": [{"name": "Guardian spear", "rng": "Melee", "a": "7", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": []}],
+      "abilities_raw": "Auramite and Adamantine: Cap damage to 1.",
+      "composition_raw": "1 Model", "keywords": "INFANTRY, CHARACTER, TERMINATOR", "faction": "ADEPTUS CUSTODES"
+    },
+    "shield_captain_on_dawneagle_jetbike": {
+      "stats": {"M": "12\"", "T": "7", "Sv": "2+", "W": "8", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "1 model: 150",
+      "ranged": [{"name": "Salvo launcher", "rng": "24\"", "a": "1", "skill": "2+", "s": "10", "ap": "-3", "d": "D6+1", "tags": ["Twin-linked"]}],
+      "melee": [{"name": "Interceptor lance", "rng": "Melee", "a": "6", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": ["Lance"]}],
+      "abilities_raw": "Sweeping Advance: Fall Back or Move after combat.",
+      "composition_raw": "1 Model", "keywords": "MOUNTED, CHARACTER, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "telemon_heavy_dreadnought": {
+      "stats": {"M": "8\"", "T": "10", "Sv": "2+", "W": "12", "Ld": "6+", "OC": "4"},
+      "invuln": "4+", "points": "1 model: 235",
+      "ranged": [{"name": "Arachnus storm cannon", "rng": "24\"", "a": "12", "skill": "2+", "s": "6", "ap": "-1", "d": "1", "tags": ["Devastating Wounds"]}],
+      "melee": [{"name": "Telemon caestus", "rng": "Melee", "a": "5", "skill": "2+", "s": "12", "ap": "-2", "d": "3", "tags": []}],
+      "abilities_raw": "Guardian Eternal: Subtract 1 from Damage received.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, WALKER, TELEMON", "faction": "ADEPTUS CUSTODES"
+    },
+    "venatari_custodians": {
+      "stats": {"M": "10\"", "T": "6", "Sv": "2+", "W": "3", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "3 models: 165, 6 models: 330",
+      "ranged": [{"name": "Venatari lance", "rng": "24\"", "a": "2", "skill": "2+", "s": "4", "ap": "-1", "d": "2", "tags": ["Assault"]}],
+      "melee": [{"name": "Venatari lance", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": ["Lance"]}],
+      "abilities_raw": "Swooping Dive: Rapid Ingress for 0CP.",
+      "composition_raw": "3-6 Models", "keywords": "INFANTRY, JUMP PACK, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "venerable_contemptor_dreadnought": {
+      "stats": {"M": "6\"", "T": "9", "Sv": "2+", "W": "10", "Ld": "6+", "OC": "3"},
+      "invuln": "5+", "points": "1 model: 170",
+      "ranged": [{"name": "Multi-melta", "rng": "18\"", "a": "2", "skill": "2+", "s": "9", "ap": "-4", "d": "D6", "tags": ["Melta 2"]}],
+      "melee": [{"name": "Contemptor combat weapon", "rng": "Melee", "a": "5", "skill": "2+", "s": "12", "ap": "-2", "d": "3", "tags": []}],
+      "abilities_raw": "Unyielding Ancient: Set back up on 2+ after death.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, WALKER", "faction": "ADEPTUS CUSTODES"
+    },
+    "venerable_land_raider": {
+      "stats": {"M": "10\"", "T": "12", "Sv": "2+", "W": "16", "Ld": "6+", "OC": "5"},
+      "invuln": "-", "points": "1 model: 220",
+      "ranged": [{"name": "Godhammer lascannon", "rng": "48\"", "a": "2", "skill": "2+", "s": "12", "ap": "-3", "d": "D6+1", "tags": []}],
+      "melee": [{"name": "Armoured tracks", "rng": "Melee", "a": "6", "skill": "4+", "s": "8", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Assault Ramp: Charge after moving.",
+      "composition_raw": "1 Model", "keywords": "VEHICLE, TRANSPORT", "faction": "ADEPTUS CUSTODES"
+    },
+    "vertus_praetors": {
+      "stats": {"M": "12\"", "T": "7", "Sv": "2+", "W": "5", "Ld": "6+", "OC": "2"},
+      "invuln": "4+", "points": "2 models: 150, 3 models: 225",
+      "ranged": [{"name": "Salvo launcher", "rng": "24\"", "a": "1", "skill": "2+", "s": "10", "ap": "-3", "d": "D6+1", "tags": ["Twin-linked"]}],
+      "melee": [{"name": "Interceptor lance", "rng": "Melee", "a": "5", "skill": "2+", "s": "7", "ap": "-2", "d": "2", "tags": ["Lance"]}],
+      "abilities_raw": "Quicksilver Execution: Cause mortals by moving over enemy.",
+      "composition_raw": "2-3 Models", "keywords": "MOUNTED, FLY", "faction": "ADEPTUS CUSTODES"
+    },
+    "vigilators": {
+      "stats": {"M": "6\"", "T": "3", "Sv": "3+", "W": "1", "Ld": "6+", "OC": "1"},
+      "invuln": "-", "points": "4 models: 45, 5 models: 55, 9 models: 90, 10 models: 100",
+      "ranged": [],
+      "melee": [{"name": "Executioner greatblade", "rng": "Melee", "a": "2", "skill": "3+", "s": "5", "ap": "-2", "d": "2", "tags": ["Anti-Psyker 5+", "Devastating Wounds"]}],
+      "abilities_raw": "Deft Parry: Penalty to hit unit in melee.",
+      "composition_raw": "4-10 Models", "keywords": "INFANTRY, ANATHEMA PSYKANA", "faction": "ADEPTUS CUSTODES"
+    },
+    "witchseekers": {
+      "stats": {"M": "6\"", "T": "3", "Sv": "3+", "W": "1", "Ld": "6+", "OC": "1"},
+      "invuln": "-", "points": "4 models: 45, 5 models: 55, 9 models: 90, 10 models: 100",
+      "ranged": [{"name": "Witchseeker flamer", "rng": "12\"", "a": "D6", "skill": "N/A", "s": "4", "ap": "0", "d": "1", "tags": ["Torrent"]}],
+      "melee": [{"name": "Close combat weapon", "rng": "Melee", "a": "2", "skill": "3+", "s": "3", "ap": "0", "d": "1", "tags": []}],
+      "abilities_raw": "Sanctified Flames: Force Battle-shock tests.",
+      "composition_raw": "4-10 Models", "keywords": "INFANTRY, ANATHEMA PSYKANA", "faction": "ADEPTUS CUSTODES"
+    }
+  }
 }
